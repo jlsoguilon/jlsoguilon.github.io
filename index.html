@@ -120,12 +120,78 @@ main:nth-of-type(2) section:nth-of-type(3){--glow:#30d158;--spot:rgba(48,209,88,
 .lk:nth-child(5n+1) .i{background:linear-gradient(135deg,#0a84ff,#5e5ce6)}.lk:nth-child(5n+2) .i{background:linear-gradient(135deg,#14b8a6,#30d158)}.lk:nth-child(5n+3) .i{background:linear-gradient(135deg,#ff375f,#ff9f0a)}.lk:nth-child(5n+4) .i{background:linear-gradient(135deg,#bf5af2,#ff375f)}.lk:nth-child(5n) .i{background:linear-gradient(135deg,#ff9f0a,#ff6a3d)}
 .job:before{background:var(--glow)}.job .c{color:var(--glow)}
 @media (prefers-reduced-motion:reduce){.orbs::before,.orbs::after,.orbs i,.ph::before{animation:none}}
+#demos{--glow:#8e5cff;--spot:rgba(142,92,255,.22)}
+.tabs2{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.tabs2 button{font:inherit;font-size:14px;background:transparent;color:var(--mute);border:1px solid var(--line);border-radius:99px;padding:8px 18px;cursor:pointer}
+.tabs2 button.on{background:var(--glow);border-color:var(--glow);color:#fff}
+.pn[hidden]{display:none}
+.ctl{display:flex;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.ctl select{font:inherit;background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:6px 12px}
+.kp{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin-bottom:22px}
+.kp div{border:1px solid var(--line);border-radius:16px;padding:14px}.kp b{display:block;font-size:24px;letter-spacing:-.02em;color:var(--glow)}.kp span{font-size:12px;color:var(--mute)}
+.pn .two{display:grid;grid-template-columns:1.3fr 1fr;gap:26px}
+.sm{font-size:13px;margin:0 0 8px}
+#bars{width:100%;height:auto}
+.dn{display:grid;grid-template-columns:110px 1fr 26px;align-items:center;gap:8px;font-size:13px;margin-bottom:10px}.dn i{display:block;height:10px;border-radius:6px;background:var(--glow)}.dn span{color:var(--mute)}
+pre{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:16px;overflow-x:auto;font:13px/1.5 ui-monospace,Menlo,Consolas,monospace;white-space:pre;margin:14px 0}
+details{border-bottom:1px solid var(--line);padding:12px 0}summary{cursor:pointer;font-weight:600}
+.cgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}.cgrid img{width:100%;border-radius:12px}
+@media (max-width:700px){.pn .two{grid-template-columns:1fr}}
+.app{padding:0!important;display:grid;grid-template-columns:180px 1fr;overflow:hidden;--a:#0a84ff;--g:#30d158;--w:#ff9f0a;--r:#ff375f}
+.app[hidden]{display:none}
+.side{background:var(--bg);border-right:1px solid var(--line);padding:18px 12px;display:flex;flex-direction:column;gap:4px}
+.side .logo{font-size:15px;margin:0 8px 16px}.side .logo b{color:var(--a)}
+.side button{font:inherit;font-size:14px;text-align:left;background:none;border:0;color:var(--mute);padding:9px 12px;border-radius:10px;cursor:pointer}
+.side button.on{background:var(--card);color:var(--ink);box-shadow:inset 3px 0 0 var(--a)}
+.mainp{min-width:0}.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:16px 22px;border-bottom:1px solid var(--line)}.top h3{margin:0}
+.top .ctl{margin:0}.av{width:34px;height:34px;border-radius:50%;background:var(--a);color:#fff;display:grid;place-items:center;font-size:12px;font-weight:700}
+.bd{padding:20px 22px 24px}
+.kg{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:16px}
+.k{border:1px solid var(--line);border-radius:16px;padding:14px;background:var(--bg)}.k span{display:block;font-size:12px;color:var(--mute)}.k b{font-size:26px;letter-spacing:-.02em}.k em{font-style:normal;font-size:12px;margin-left:8px}
+.g{color:var(--g)}.w{color:var(--w)}.r{color:var(--r)}
+.cg{display:grid;grid-template-columns:1.6fr 1fr;gap:14px;margin-bottom:14px}
+.c2{border:1px solid var(--line);border-radius:16px;padding:16px;background:var(--bg);min-width:0}.c2 h4{margin:0 0 10px;font-size:14px}
+.ln{width:100%;height:auto}
+.row{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}.row:last-child{border:0}.row .n{flex:1;min-width:0}
+.ch{font-size:11px;font-weight:600;padding:3px 10px;border-radius:99px;background:color-mix(in srgb,currentColor 14%,transparent)}
+.bar{height:8px;border-radius:5px;background:var(--line);overflow:hidden;flex:1}.bar i{display:block;height:100%;border-radius:5px;background:var(--a)}
+.tb{width:100%;border-collapse:collapse;font-size:14px}.tb th{text-align:left;color:var(--mute);font-weight:500;font-size:12px;padding:8px}.tb td{padding:10px 8px;border-top:1px solid var(--line)}
+.pc{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}.pc .c2 b{font-size:22px}.pc small{color:var(--mute);display:block}
+.ob{font:inherit;font-size:12px;background:none;border:1px solid var(--line);color:var(--mute);border-radius:99px;padding:5px 12px;cursor:pointer}.ob.on{background:var(--g);border-color:var(--g);color:#000}
+.wsg{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.wsg figure{margin:0;border:1px solid var(--line);border-radius:20px;overflow:hidden;background:var(--bg)}
+.wsg .im{display:block;overflow:hidden;cursor:zoom-in;aspect-ratio:16/10;background:#fff}.wsg img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .5s}.wsg .im:hover img{transform:scale(1.06)}
+.wsg figcaption{padding:16px 18px}.wsg b{display:block;font-size:18px;margin-bottom:4px}.wsg p{margin:0 0 10px;color:var(--mute);font-size:14px}
+.wsg .tg{display:inline-block;font-size:12px;border:1px solid var(--glow);color:var(--glow);border-radius:99px;padding:2px 10px;margin-right:6px}
+#lb{position:fixed;inset:0;z-index:40;background:rgba(0,0,0,.88);display:grid;place-items:center;padding:24px;cursor:zoom-out}#lb[hidden]{display:none}#lb img{max-width:100%;max-height:100%;border-radius:12px}
+@media (max-width:760px){.app{grid-template-columns:1fr}.side{flex-direction:row;overflow-x:auto;border-right:0;border-bottom:1px solid var(--line);padding:10px}.side .logo,.side p{display:none}.side button{white-space:nowrap}.cg{grid-template-columns:1fr}.tb{font-size:13px}}
+.pn{--a:#0a84ff;--g:#30d158;--w:#ff9f0a;--r:#ff375f}
+h2{padding-bottom:.14em}
+.slots{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin:12px 0}
+.sl{font:inherit;text-align:left;background:transparent;border:1px solid var(--line);border-radius:12px;padding:10px 12px;color:var(--ink);cursor:pointer}.sl small{display:block;color:var(--mute);font-size:12px}
+.sl.ok{border-color:var(--g);background:color-mix(in srgb,var(--g) 12%,transparent)}.sl:hover{border-color:var(--glow)}
+.mail{display:block;width:100%;text-align:left;font:inherit;background:none;border:0;border-bottom:1px solid var(--line);padding:12px 4px;color:var(--ink);cursor:pointer}
+.mail .t{display:flex;gap:10px;align-items:center}.mail .t span{flex:1;min-width:0}.mail small{color:var(--mute)}.mail.dn .t span{text-decoration:line-through;opacity:.55}
+.mail .ac{margin:8px 0 0;font-size:14px;color:var(--mute)}
+.bar2{height:8px;border-radius:5px;background:var(--line);overflow:hidden;margin:6px 0 12px;max-width:260px}.bar2 i{display:block;height:100%;background:var(--g);transition:width .4s}
+.tcols{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.tcol{border:1px solid var(--line);border-radius:16px;padding:12px;background:var(--bg)}.tcol h4{margin:0 0 10px;font-size:14px}
+.tk{display:flex;gap:6px;align-items:center;justify-content:space-between;border:1px solid var(--line);border-radius:12px;padding:8px 10px;margin-bottom:8px;font-size:14px;background:var(--card)}
+.tk button{font:inherit;background:none;border:1px solid var(--line);color:var(--ink);border-radius:8px;width:28px;height:28px;cursor:pointer}.tk button:disabled{opacity:.25}
+.mono{white-space:pre;font:12px ui-monospace,Menlo,Consolas,monospace;color:var(--mute)}
+@media (max-width:700px){.tcols{grid-template-columns:1fr}}
+mark{background:linear-gradient(100deg,#0a84ff,#bf5af2,#0a84ff);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:700;animation:sh 6s ease-in-out infinite alternate}
+mark:nth-of-type(2){background-image:linear-gradient(100deg,#bf5af2,#ff375f,#bf5af2);background-size:200% 100%}
+mark:nth-of-type(3){background-image:linear-gradient(100deg,#ff9f0a,#ff375f,#ff9f0a);background-size:200% 100%}
+@keyframes sh{to{background-position:100% 0}}
+button.chip{font:inherit;font-size:15px;cursor:pointer;transition:.2s}.chip.on{background:var(--c,var(--glow));color:#fff;border-color:var(--c,var(--glow))}
+.skp{margin-top:8px;border:1px solid var(--glow);border-radius:20px;padding:18px 22px;box-shadow:0 0 40px var(--spot);font-size:18px;line-height:1.5}
+@media (prefers-reduced-motion:reduce){mark{animation:none}}
 </style>
 </head>
 <body>
 <div id="bar"></div>
 <div class="orbs" aria-hidden="true"><i></i></div>
-<nav><div class="wrap"><b id="nm"></b><div><a href="#services">Services</a><a href="#journey">Claim journey</a><a href="#samples">Work</a><a href="#experience">Experience</a><a href="#contact">Contact</a><button id="th" aria-label="Toggle light or dark">◐</button></div></div></nav>
+<nav><div class="wrap"><b id="nm"></b><div><a href="#services">Services</a><a href="#journey">Claim journey</a><a href="#demos">Projects</a><a href="#experience">Experience</a><a href="#contact">Contact</a><button id="th" aria-label="Toggle light or dark">◐</button></div></div></nav>
 <header class="hero">
 <div class="ph" role="img" aria-label="Portrait of John Leigh Soguilon"></div>
 <p class="badge"><i></i><span id="clk">Open to Healthcare VA roles</span></p>
@@ -138,12 +204,72 @@ main:nth-of-type(2) section:nth-of-type(3){--glow:#30d158;--spot:rgba(48,209,88,
 </header>
 <main class="wrap">
 <section style="padding-top:60px"><p class="state rv" id="sum"></p>
-<div class="stats rv"><div><b><span data-n="10">10</span>+</b>years in BPO operations</div><div><b data-n="10">10</b>roles across industries</div><div><b>RCM</b>healthcare billing and AR focus</div></div></section>
+<p class="act rv" style="margin:40px 0 12px">My path</p><p class="mute rv" style="margin:0 0 18px">Tap a stage to see how my career grew.</p>
+<div class="steps rv" id="pth"></div><div class="panel rv" id="pthp"></div>
+</section>
 <section id="services"><p class="act rv">Act I</p><h2 class="rv">What I can do for you.</h2><div class="grid" id="svc"></div></section>
 <section id="journey"><p class="act rv">Interactive</p><h2 class="rv">Follow the claim.</h2>
 <p class="mute rv" style="margin:0 0 30px;max-width:640px">Tap each stage to see what happens to a healthcare claim, and where I come in.</p>
 <div class="steps rv" id="steps"></div><div class="panel rv" id="panel"></div></section>
-<section id="samples"><p class="act rv">Act II</p><h2 class="rv">The work.</h2><div class="rail" id="rail"></div></section>
+<section id="demos"><p class="act rv">Act II</p><h2 class="rv">Things I build and can do.</h2>
+<p class="mute rv" style="margin:0 0 28px;max-width:660px">Interactive demos built with sample data, not client information. Explore the dashboards, browse my work samples, or copy the macro.</p>
+<div class="tabs2 rv" id="tabs2"><button class="on" data-t="tp">Team performance</button><button data-t="ar">AR dashboard</button><button data-t="ws">Work samples</button><button data-t="sc">Scheduling</button><button data-t="ib">Inbox triage</button><button data-t="tb">Task board</button><button data-t="dc">Data cleanup</button><button data-t="mac">Excel macro</button><button data-t="tpl">VA templates</button><button data-t="cr" id="crTab" hidden>Creative work</button></div>
+<div class="bento rv pn app" id="pn-tp"><aside class="side" id="side"></aside><div class="mainp"><div class="top"><div><h3>Team performance</h3><span class="mute sm">Revenue cycle QA · sample data</span></div><div class="ctl"><select id="tm" aria-label="Team"><option>All</option><option>Alpha</option><option>Bravo</option></select><select id="pd" aria-label="Period"><option value="4">Last 4 weeks</option><option value="12">Last 12 weeks</option></select><span class="av">JL</span></div></div><div class="bd" id="tpv"></div></div></div>
+<div class="bento rv pn" id="pn-ws" hidden><div class="wsg" id="ws"></div></div>
+<div class="bento rv pn" id="pn-ar" hidden><div class="ctl"><label for="payer">Payer</label><select id="payer"><option>All</option><option>Payer A</option><option>Payer B</option><option>Payer C</option></select><span class="mute">Sample data</span></div>
+<div class="kp" id="kp"></div><div class="two"><div><p class="mute sm">AR by age (USD)</p><svg id="bars" viewBox="0 0 520 210" role="img" aria-label="AR aging bar chart"></svg></div><div><p class="mute sm">Top denial reasons (claims)</p><div id="dn"></div></div></div></div>
+<div class="bento rv pn" id="pn-sc" hidden><div class="ctl"><label for="zn">Client time zone</label><select id="zn"><option value="America/New_York">New York</option><option value="America/Chicago">Chicago</option><option value="America/Los_Angeles">Los Angeles</option><option value="Europe/London">London</option><option value="Australia/Sydney">Sydney</option></select><label for="dy">Day</label><select id="dy"></select></div>
+<p class="mute sm">Green slots fall inside the client's workday (8 AM to 5 PM). Tap a slot to get a ready-to-send invite message.</p><div class="slots" id="slots"></div><pre id="inv">Pick a slot to see the message.</pre></div>
+<div class="bento rv pn" id="pn-ib" hidden><div class="ctl" id="ibf"></div><p class="mute sm" id="ibp"></p><div id="ibl"></div></div>
+<div class="bento rv pn" id="pn-tb" hidden><p class="mute sm">Tap the arrows to move a task between columns.</p><div class="tcols" id="tcols"></div></div>
+<div class="bento rv pn" id="pn-dc" hidden><div class="ctl"><button class="btn" id="dcb">Clean data</button><span class="mute sm" id="dcn">Messy sample list: extra spaces, mixed capitals, different phone formats, a duplicate, and a bad email.</span></div><div style="overflow-x:auto"><table class="tb" id="dct"></table></div></div>
+<div class="bento rv pn" id="pn-mac" hidden><h3>Flag overdue claims and build an aging summary</h3><p class="mute">An Excel macro that calculates days open for every claim, assigns an aging bucket, and highlights anything over 90 days. Columns: A Claim ID, B Payer, C Date of service, D Balance, E Days open, F Bucket.</p>
+<pre id="vba">Sub FlagOverdueClaims()
+    Dim ws As Worksheet, lastRow As Long, i As Long
+    Dim daysOpen As Long, overdue As Long
+    Set ws = ActiveSheet
+    lastRow = ws.Cells(ws.Rows.Count, "A").End(xlUp).Row
+    Application.ScreenUpdating = False
+    For i = 2 To lastRow
+        daysOpen = Date - ws.Cells(i, "C").Value
+        ws.Cells(i, "E").Value = daysOpen
+        Select Case daysOpen
+            Case Is &lt;= 30: ws.Cells(i, "F").Value = "0-30"
+            Case Is &lt;= 60: ws.Cells(i, "F").Value = "31-60"
+            Case Is &lt;= 90: ws.Cells(i, "F").Value = "61-90"
+            Case Else
+                ws.Cells(i, "F").Value = "90+"
+                ws.Rows(i).Interior.Color = RGB(255, 235, 156)
+                overdue = overdue + 1
+        End Select
+    Next i
+    Application.ScreenUpdating = True
+    MsgBox overdue &amp; " claims are over 90 days and were highlighted.", vbInformation
+End Sub</pre><button class="btn" id="cpy">Copy macro</button></div>
+<div class="bento rv pn" id="pn-tpl" hidden><details open><summary>Client follow-up email</summary><pre>Subject: Quick follow-up on [project or request]
+
+Hi [Name],
+
+I wanted to follow up on [item]. Here is where things stand:
+- Done: [completed items]
+- In progress: [items and expected date]
+- Needs your input: [question or approval]
+
+Please let me know by [date] so we can stay on schedule.
+
+Best regards,
+John Leigh</pre></details>
+<details><summary>Meeting scheduling message</summary><pre>Hi [Name], I would like to set up a [30-minute] call about [topic].
+These times are open on my end (Manila time and your time shown):
+1) [Day, time]  2) [Day, time]  3) [Day, time]
+Reply with the one that works and I will send the calendar invite with the meeting link.</pre></details>
+<details><summary>Weekly status report outline</summary><pre>Week of [date]
+1. Completed this week
+2. In progress and next steps
+3. Issues or blockers
+4. Numbers (tasks closed, items pending, turnaround time)
+5. Priorities for next week</pre></details></div>
+<div class="bento rv pn" id="pn-cr" hidden><div class="cgrid" id="cgrid"></div></div></section>
 </main>
 <div class="mq" aria-hidden="true"><div class="track" id="track"></div></div>
 <main class="wrap">
@@ -154,13 +280,14 @@ main:nth-of-type(2) section:nth-of-type(3){--glow:#30d158;--spot:rgba(48,209,88,
 <div class="tree" id="tree"></div></section>
 </main>
 <a class="fab" id="fab" href="#contact">Hire me ↗</a>
+<div id="lb" hidden><img alt=""></div>
 <footer><div class="wrap" id="foot"></div></footer>
 <script>
 /* ===== EDIT YOUR CONTENT HERE (or ask Claude to change it) ===== */
 const DATA = {
   name: "John Leigh Soguilon",
   tagline: "Healthcare Virtual Assistant | Medical Billing | AR Follow-Up | Claims Management",
-  summary: "Healthcare virtual assistant with 10+ years in BPO and hands-on revenue cycle experience: AR follow-up and claims status, denials, EOB/ERA review, insurance verification, and payer portal work. I pair medical billing knowledge with strong administrative, communication, and quality-assurance skills to keep remote healthcare teams accurate, compliant, and organized.",
+  summary: "Healthcare professional with 12+ years in BPO and customer operations, grown into 5+ years of quality and compliance work with a specialty in healthcare revenue cycle management: AR follow-up and claims status, denials, EOB/ERA review, insurance verification, and payer portal work. I pair medical billing knowledge with strong administrative, communication, and quality-assurance skills to keep remote healthcare teams accurate, compliant, and organized.",
   email: "john_leigh_soguilon@yahoo.com",
   location: "Metro Manila, Philippines",
   links: [
@@ -191,16 +318,18 @@ const DATA = {
     ["2012 – 2013","Bachelor of Science in Information Technology","AMA University"],
     ["2010 – 2012","Bachelor of Science in Nursing","Pamantasan ng Lungsod ng Maynila"]
   ],
-  references: "References available upon request."
+  references: "References available upon request.",
+  /* Add your real creative work here, then it appears on the site. Example:
+     creative: [{t:"AI video: Manila skyline", p:"15-second clip made with AI tools", url:"https://youtu.be/XXXX", img:""}], */
+  creative: []
 };
 /* ===== END EDITABLE CONTENT ===== */
 const $=id=>document.getElementById(id);
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const D=DATA;
-$("nm").textContent=D.name;$("name").textContent=D.name;$("tag").textContent=D.tagline;$("sum").textContent=D.summary;
+$("nm").textContent=D.name;$("name").textContent=D.name;$("tag").textContent=D.tagline;$("sum").innerHTML="Healthcare professional who grew from <mark>12+ years of BPO operations</mark> into <mark>5+ years of quality and compliance</mark>, now specializing in <mark>healthcare revenue cycle management</mark>, a field I entered at EXL in 2019.";
 
 $("svc").innerHTML=D.projects.map((p,i)=>`<div class="bento rv"><span class="n">${String(i+1).padStart(2,"0")}</span><h3>${esc(p.t)}</h3><p>${esc(p.p)}</p></div>`).join("");
-$("rail").innerHTML=D.samples.map(s=>`<figure class="rv"><img src="${s.img}" alt="${esc(s.t)}"><figcaption><b>${esc(s.t)}</b><span>${esc(s.p)}</span></figcaption></figure>`).join("");
 const tl=D.tools.flatMap(g=>g[1]);
 $("track").innerHTML=[...tl,...tl].map(x=>`<span>${esc(x)}</span>`).join("");
 $("skills").innerHTML=D.skills.map(s=>`<span class="chip">${esc(s)}</span>`).join("");
@@ -232,6 +361,95 @@ addEventListener("scroll",()=>{const d=document.documentElement;$("bar").style.w
 $("th").onclick=()=>{const r=document.documentElement,dark=r.dataset.theme?r.dataset.theme==="dark":!matchMedia("(prefers-color-scheme:light)").matches;r.dataset.theme=dark?"light":"dark"};
 const cn=document.querySelector(".stats");
 if(cn&&"IntersectionObserver" in window)new IntersectionObserver((es,o)=>{if(es[0].isIntersecting){o.disconnect();cn.querySelectorAll("[data-n]").forEach(el=>{const n=+el.dataset.n,t0=performance.now();(function f(t){const k=Math.min(1,(t-t0)/1200);el.textContent=Math.round(n*(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(f)})(t0)})}}).observe(cn);
+const PD={"Payer A":{a:[42000,31000,18000,9000,6000],d:[["Missing info",14],["Not covered",9],["Auth needed",7],["Timely filing",4]],c:310,n:34},"Payer B":{a:[36000,29000,21000,12000,8500],d:[["Auth needed",16],["Missing info",12],["Duplicate claim",6],["Not covered",5]],c:285,n:39},"Payer C":{a:[28000,19000,13000,7500,4000],d:[["Timely filing",8],["Missing info",7],["Coding error",6],["Auth needed",4]],c:210,n:25}};
+const BK=["0-30","31-60","61-90","91-120","120+"],BC=["#14b8a6","#0a84ff","#8e5cff","#ff9f0a","#ff375f"];
+function dash(){const k=$("payer").value;let a=[0,0,0,0,0],d={},c=0,n=0;
+const src=k==="All"?Object.values(PD):[PD[k]];
+src.forEach(p=>{p.a.forEach((v,i)=>a[i]+=v);p.d.forEach(([m,v])=>d[m]=(d[m]||0)+v);c+=p.c;n+=p.n});
+const dl=Object.entries(d).sort((x,y)=>y[1]-x[1]).slice(0,5),tot=a.reduce((x,y)=>x+y,0),mx=Math.max(...a),md=dl[0][1];
+$("kp").innerHTML=[["$"+tot.toLocaleString(),"Total AR"],[Math.round((a[3]+a[4])/tot*100)+"%","Over 90 days"],[c.toLocaleString(),"Claims"],[(n/c*100).toFixed(1)+"%","Denial rate"]].map(x=>`<div><b>${x[0]}</b><span>${x[1]}</span></div>`).join("");
+$("bars").innerHTML=a.map((v,i)=>{const hh=v/mx*140,x=22+i*98;return `<g><rect x="${x}" y="${170-hh}" width="68" height="${hh}" rx="9" fill="${BC[i]}"><title>${BK[i]} days: $${v.toLocaleString()}</title></rect><text x="${x+34}" y="${162-hh}" text-anchor="middle" font-size="12" style="fill:var(--ink)">$${Math.round(v/1000)}k</text><text x="${x+34}" y="192" text-anchor="middle" font-size="12" style="fill:var(--mute)">${BK[i]}</text></g>`}).join("");
+$("dn").innerHTML=dl.map(([m,v])=>`<div class="dn"><span>${esc(m)}</span><i style="width:${v/md*100}%"></i><b>${v}</b></div>`).join("")}
+$("payer").onchange=dash;dash();
+$("tabs2").onclick=e=>{const b=e.target.closest("button");if(!b)return;[...$("tabs2").children].forEach(x=>x.classList.toggle("on",x===b));["tp","ar","ws","sc","ib","tb","dc","mac","tpl","cr"].forEach(t=>{$("pn-"+t).hidden=t!==b.dataset.t})};
+$("cpy").onclick=async()=>{try{await navigator.clipboard.writeText($("vba").textContent);$("cpy").textContent="Copied!"}catch(e){const r=document.createRange();r.selectNodeContents($("vba"));const s=getSelection();s.removeAllRanges();s.addRange(r);$("cpy").textContent="Selected: press Ctrl+C"}};
+if(D.creative&&D.creative.length){$("crTab").hidden=false;$("cgrid").innerHTML=D.creative.map(c=>`<div>${c.img?`<img src="${esc(c.img)}" alt="${esc(c.t)}">`:""}<h3>${esc(c.t)}</h3><p class="mute">${esc(c.p||"")}</p>${c.url?`<a class="btn" href="${esc(c.url)}" target="_blank" rel="noopener">Watch or view</a>`:""}</div>`).join("")}
+const AG=[["Agent 01","Alpha",97.4,58,1],["Agent 02","Alpha",96.1,54,2],["Agent 03","Alpha",95.2,61,3],["Agent 04","Alpha",93.8,49,5],["Agent 05","Bravo",95.9,57,2],["Agent 06","Bravo",93.5,52,4],["Agent 07","Bravo",92.1,47,6],["Agent 08","Bravo",90.7,44,8]];
+const TR={Alpha:[91.8,89.9,93.4,92.1,95.2,93.6,96.1,94.2,95.9,93.8,96.7,95.4],Bravo:[88.1,90.4,87.9,91.2,89.6,92.3,90.1,93,91.4,94.1,92.2,93.8]};
+const OP=[["Incomplete account notes","Notes missing payer reference and next step","High",1.4,"Notes template and a 15-minute huddle"],["Incorrect denial code selected","Denials coded to the wrong category after portal checks","High",1.1,"Denial code job aid"],["Follow-up date not set","Open accounts with no next action date","Medium",.8,"Add a date check to the QA form"],["Eligibility not re-verified","Coverage not rechecked before appeals","Medium",.6,"Add a checkpoint to the workflow"],["Slow portal navigation","Extra clicks on the Payer Site B status lookup","Low",.3,"Shortcut guide"]];
+const PP=[["Availity","Availity",142,97.2,3.1,"Healthy"],["Payer Site A","Payer’s own site",88,94,4.6,"Healthy"],["Payer Site B","Payer’s own site",61,89.5,6.8,"Slow"],["Payer Site C","Phone and fax",24,78,11.2,"Manual"]];
+const DN=[["Missing or invalid information",412,-3],["Authorization required",288,5],["Non-covered service",231,-1],["Timely filing",154,-8],["Duplicate claim",97,2],["Coding error",83,-4]];
+const SV=[["ov","Overview"],["qa","QA scores"],["pd","Productivity"],["dn","Denials"],["ap","Appeals"],["ag","AR aging"],["pp","Payer portals"],["op","Opportunities"],["co","Coaching"],["cl","Calibration"]];
+const PRW={Alpha:[52,50,55,53,57,54,58,56,59,55,60,58],Bravo:[46,49,45,48,47,51,48,52,50,53,51,54]};
+const AP=[["Medical necessity",42,61],["Authorization",35,48],["Coding",18,72],["Timely filing",9,22]];
+const CO=[["Agent 08","Notes quality","Completed","Week 1"],["Agent 06","Follow-up dates","Completed","Week 2"],["Agent 04","Portal navigation","In progress","Week 3"],["Agent 07","Denial coding","Scheduled","Week 4"],["Agent 03","Eligibility checks","Scheduled","Week 5"]];
+const CAL=[["Week 1",92],["Week 2",94],["Week 3",91],["Week 4",96]],DIS=[["Notes completeness",14],["Denial reason match",9],["Follow-up date",6]];let tv="ov";const done=new Set();
+$("side").innerHTML='<div class="logo"><b>RCM</b> Insights</div>'+SV.map(x=>`<button data-v="${x[0]}">${x[1]}</button>`).join("")+'<p class="mute sm" style="margin-top:auto">Demo, sample data</p>';
+const av=a=>a.reduce((x,y)=>x+y,0)/a.length,stc=q=>q>=95?["On target","g"]:q>=92?["Coaching","w"]:["At risk","r"];
+const chip=(t,c)=>`<span class="ch ${c}">${t}</span>`,K=(l,v,s,c)=>`<div class="k"><span>${l}</span><b>${v}</b>${s?`<em class="${c}">${s}</em>`:""}</div>`;
+function line(v,t){const lo=Math.floor(Math.min(...v,t)-1),hi=Math.ceil(Math.max(...v,t)+1),w=560,hh=190,px=i=>36+i*(w-56)/(v.length-1),py=x=>10+(hi-x)/(hi-lo)*(hh-30);
+return `<svg class="ln" viewBox="0 0 ${w} ${hh+10}" role="img" aria-label="QA score trend">`+[0,1,2,3].map(i=>Math.round(lo+(hi-lo)*i/3)).map(g=>`<text x="4" y="${py(g)+4}" font-size="11" style="fill:var(--mute)">${g}</text><line x1="30" x2="${w-10}" y1="${py(g)}" y2="${py(g)}" stroke="var(--line)"/>`).join("")+`<line x1="30" x2="${w-10}" y1="${py(t)}" y2="${py(t)}" stroke="var(--g)" stroke-dasharray="5 5"/><polyline points="${v.map((x,i)=>px(i)+","+py(x)).join(" ")}" fill="none" stroke="var(--a)" stroke-width="3" stroke-linejoin="round"/>`+v.map((x,i)=>`<circle cx="${px(i)}" cy="${py(x)}" r="3.5" fill="var(--a)"><title>Week ${i+1}: ${x}%</title></circle>`).join("")+`</svg>`}
+function tpr(){const t=$("tm").value,n=+$("pd").value,ag=t==="All"?AG:AG.filter(a=>a[1]===t),tr=(t==="All"?TR.Alpha.map((x,i)=>(x+TR.Bravo[i])/2):TR[t]).slice(-n).map(x=>+x.toFixed(1));
+const qa=av(ag.map(a=>a[2])),pr=av(ag.map(a=>a[3])),er=ag.reduce((x,a)=>x+a[4],0),op=OP.filter((o,i)=>!done.has(i)),d=tr[tr.length-1]-tr[0];
+const top=[...ag].sort((a,b)=>b[2]-a[2]);let o="";
+if(tv==="ov"){o=`<div class="kg">${K("Team QA score",qa.toFixed(1)+"%",(d>=0?"▲ ":"▼ ")+Math.abs(d).toFixed(1)+" pts",d>=0?"g":"r")}${K("Accounts per agent a day",pr.toFixed(0),"","")}${K("QA errors found",er,"","")}${K("Open opportunities",op.length,"","")}</div>
+<div class="cg"><div class="c2"><h4>QA score trend (target 95%)</h4>${line(tr,95)}</div><div class="c2"><h4>Top performers</h4>${top.slice(0,3).map((a,i)=>`<div class="row"><b>${i+1}</b><span class="n">${a[0]}<br><small class="mute">${a[1]}</small></span><b>${a[2]}%</b></div>`).join("")}</div></div>
+<div class="c2"><h4>Biggest opportunities</h4>${op.slice(0,3).map(x=>`<div class="row"><span class="n">${x[0]}<br><small class="mute">${x[1]}</small></span>${chip(x[2],x[2]==="High"?"r":x[2]==="Medium"?"w":"g")}<b class="g">+${x[3]}</b></div>`).join("")||"All opportunities planned."}</div>`}
+if(tv==="qa")o=`<div class="c2"><h4>QA scores by agent</h4><table class="tb"><tr><th>Agent</th><th>Team</th><th>QA score</th><th>Errors</th><th>Accts/day</th><th>Status</th></tr>${top.map(a=>{const s=stc(a[2]);return `<tr><td>${a[0]}</td><td>${a[1]}</td><td><div class="row" style="border:0;padding:0"><div class="bar"><i style="width:${(a[2]-80)*5}%;background:var(--${s[1]})"></i></div><b>${a[2]}%</b></div></td><td>${a[4]}</td><td>${a[3]}</td><td>${chip(s[0],s[1])}</td></tr>`}).join("")}</table></div>`;
+if(tv==="dn"){const m=DN[0][1],T=DN.reduce((x,y)=>x+y[1],0);o=`<div class="kg">${K("Total denials",T.toLocaleString())}${K("Top reason",Math.round(m/T*100)+"%","Missing info","")}${K("Fastest improving","Timely filing","▼ 8%","g")}</div><div class="c2"><h4>Denial reasons</h4>${DN.map(x=>`<div class="row"><span class="n">${x[0]}</span><div class="bar" style="max-width:200px"><i style="width:${x[1]/m*100}%"></i></div><b>${x[1]}</b>${chip((x[2]>0?"▲ ":"▼ ")+Math.abs(x[2])+"%",x[2]>0?"r":"g")}</div>`).join("")}</div>`}
+if(tv==="pp")o=`<div class="pc">${PP.map(p=>`<div class="c2"><h4>${p[0]} ${chip(p[5],p[5]==="Healthy"?"g":p[5]==="Slow"?"w":"r")}</h4><small>${p[1]}</small><br><b>${p[2]}</b> <small style="display:inline">status checks a day</small><div class="row"><span class="n">First-try success</span><b>${p[3]}%</b></div><div class="row"><span class="n">Minutes per check</span><b>${p[4]}</b></div></div>`).join("")}</div>`;
+if(tv==="op"){const lift=OP.reduce((x,y,i)=>x+(done.has(i)?y[3]:0),0);o=`<div class="kg">${K("Planned score lift","+"+lift.toFixed(1)+" pts","","g")}${K("Still open",op.length)}</div><div class="c2"><h4>Opportunities from QA findings</h4>${OP.map((x,i)=>`<div class="row"><span class="n">${x[0]}<br><small class="mute">${x[1]} · Fix: ${x[4]}</small></span>${chip(x[2],x[2]==="High"?"r":x[2]==="Medium"?"w":"g")}<b class="g">+${x[3]}</b><button class="ob ${done.has(i)?"on":""}" data-o="${i}">${done.has(i)?"Planned ✓":"Plan it"}</button></div>`).join("")}</div>`}
+if(tv==="pd"){const pw=(t==="All"?PRW.Alpha.map((x,i)=>(x+PRW.Bravo[i])/2):PRW[t]).slice(-n).map(x=>+x.toFixed(1)),by=[...ag].sort((a,b)=>b[3]-a[3]);
+o=`<div class="kg">${K("Avg accounts a day",pr.toFixed(0))}${K("Agents at target (50)",ag.filter(a=>a[3]>=50).length+" of "+ag.length)}${K("Top producer",by[0][0])}</div><div class="cg"><div class="c2"><h4>Accounts per agent a day (target 50)</h4>${line(pw,50)}</div><div class="c2"><h4>By agent</h4>${by.map(a=>`<div class="row"><span class="n">${a[0]}</span><div class="bar" style="max-width:90px"><i style="width:${a[3]/65*100}%"></i></div><b>${a[3]}</b></div>`).join("")}</div></div>`}
+if(tv==="ap"){const sb=AP.reduce((x,y)=>x+y[1],0),ov=AP.reduce((x,y)=>x+y[1]*y[2],0)/sb;
+o=`<div class="kg">${K("Appeals filed",sb)}${K("Overturn rate",ov.toFixed(1)+"%","","")}${K("Avg days to decision","34")}${K("Pending",27)}</div><div class="c2"><h4>Overturn rate by appeal type</h4>${AP.map(x=>`<div class="row"><span class="n">${x[0]}<br><small class="mute">${x[1]} filed</small></span><div class="bar" style="max-width:220px"><i style="width:${x[2]}%;background:var(--${x[2]>=55?"g":x[2]>=40?"w":"r"})"></i></div><b>${x[2]}%</b></div>`).join("")}</div>`}
+if(tv==="ag"){const AGE=[["0-30",126000],["31-60",79000],["61-90",52000],["91-120",28500],["120+",18500]],tt=AGE.reduce((x,y)=>x+y[1],0);
+o=`<div class="kg">${K("Total AR","$"+tt.toLocaleString())}${K("Over 90 days",Math.round((AGE[3][1]+AGE[4][1])/tt*100)+"%","","")}${K("Oldest bucket","120+ days")}</div><div class="c2"><h4>AR by age (USD)</h4>${AGE.map(x=>`<div class="row"><span class="n">${x[0]} days</span><div class="bar" style="max-width:260px"><i style="width:${x[1]/AGE[0][1]*100}%"></i></div><b>$${x[1].toLocaleString()}</b></div>`).join("")}</div>`}
+if(tv==="co"){const dn=CO.filter(c=>c[2]==="Completed").length;
+o=`<div class="kg">${K("Sessions this month",CO.length)}${K("Completed",dn+" of "+CO.length)}${K("Next up","Agent 07")}</div><div class="c2"><h4>Coaching log</h4><table class="tb"><tr><th>Agent</th><th>Focus</th><th>When</th><th>Status</th></tr>${CO.map(c=>`<tr><td>${c[0]}</td><td>${c[1]}</td><td>${c[3]}</td><td>${chip(c[2],c[2]==="Completed"?"g":c[2]==="In progress"?"w":"r")}</td></tr>`).join("")}</table></div>`}
+if(tv==="cl"){const ag2=av(CAL.map(x=>x[1]));
+o=`<div class="kg">${K("Auditor agreement",ag2.toFixed(1)+"%","target 95%",ag2>=95?"g":"w")}${K("Scoring disputes",DIS.reduce((x,y)=>x+y[1],0))}${K("Sessions held",CAL.length)}</div><div class="cg"><div class="c2"><h4>Agreement between QA auditors</h4>${line(CAL.map(x=>x[1]),95)}</div><div class="c2"><h4>Most disputed items</h4>${DIS.map(x=>`<div class="row"><span class="n">${x[0]}</span><b>${x[1]}</b></div>`).join("")}</div></div>`}
+$("tpv").innerHTML=o;[...$("side").querySelectorAll("button")].forEach(b=>b.classList.toggle("on",b.dataset.v===tv))}
+$("side").onclick=e=>{const b=e.target.closest("button");if(b){tv=b.dataset.v;tpr()}};
+$("tpv").onclick=e=>{const b=e.target.closest("[data-o]");if(b){const i=+b.dataset.o;done.has(i)?done.delete(i):done.add(i);tpr()}};
+$("tm").onchange=$("pd").onchange=tpr;tpr();
+const WT={"Data entry":["Excel","Google Sheets"],"Monthly bookings":["Scheduling","Calendar"],"Balance sheets":["Bookkeeping","Reporting"]};
+$("ws").innerHTML=D.samples.map(s=>`<figure><a class="im" data-z="${s.img}"><img src="${s.img}" alt="${esc(s.t)}"></a><figcaption><b>${esc(s.t)}</b><p>${esc(s.p)}</p>${(WT[s.t]||[]).map(x=>`<span class="tg">${x}</span>`).join("")}</figcaption></figure>`).join("");
+$("ws").onclick=e=>{const a=e.target.closest("[data-z]");if(a){$("lb").firstChild.src=a.dataset.z;$("lb").hidden=false}};
+$("lb").onclick=()=>$("lb").hidden=true;addEventListener("keydown",e=>{if(e.key==="Escape")$("lb").hidden=true});
+const fmt=hr=>new Date(Date.UTC(2000,0,1,hr)).toLocaleTimeString("en-US",{timeZone:"UTC",hour:"numeric",minute:"2-digit"});
+const days=[];for(let i=1;days.length<5;i++){const d=new Date(Date.now()+i*864e5),w=d.getDay();if(w>0&&w<6)days.push(d)}
+$("dy").innerHTML=days.map((d,i)=>`<option value="${i}">${d.toLocaleDateString("en-US",{weekday:"long",month:"short",day:"numeric"})}</option>`).join("");
+const mt=(d,hr)=>new Date(Date.UTC(d.getFullYear(),d.getMonth(),d.getDate(),hr-8));
+function slots(){const d=days[+$("dy").value],z=$("zn").value,city=$("zn").options[$("zn").selectedIndex].text;let s="";
+for(let hr=6;hr<=23;hr++){const t=mt(d,hr),cl=t.toLocaleTimeString("en-US",{timeZone:z,hour:"numeric",minute:"2-digit"}),c=+t.toLocaleTimeString("en-US",{timeZone:z,hour:"numeric",hour12:false})%24;
+s+=`<button class="sl ${c>=8&&c<17?"ok":""}" data-h="${hr}" data-c="${cl}"><b>${fmt(hr)}</b> Manila<small>${cl} ${city}</small></button>`}
+$("slots").innerHTML=s}
+$("zn").onchange=$("dy").onchange=slots;slots();
+$("slots").onclick=e=>{const b=e.target.closest(".sl");if(!b)return;const d=days[+$("dy").value],hr=+b.dataset.h,t=mt(d,hr),z=$("zn").value,city=$("zn").options[$("zn").selectedIndex].text;
+$("inv").textContent="Hi [Name],\n\nI can meet on "+t.toLocaleDateString("en-US",{timeZone:z,weekday:"long",month:"short",day:"numeric"})+" at "+b.dataset.c+" your time ("+city+"), which is "+fmt(hr)+" in Manila.\nI will send a calendar invite with the meeting link as soon as you confirm.\n\nBest,\nJohn Leigh"};
+const EM=[["Client A","Invoice 1042 is overdue","Urgent","Send the invoice copy and payment link within the hour."],["Client B","Can we move tomorrow's call?","Urgent","Check the calendar, offer two new times, and update the invite."],["Vendor","Quote for office supplies","Reply today","Compare with the last quote and reply with a recommendation."],["Client C","Weekly report request","Reply today","Send the latest report and point out the two biggest changes."],["Client A","Please book flights for Dec 4","Reply today","Share two options with prices and wait for approval."],["Bank","Statement ready","Billing","Download, rename, and file it for reconciliation."],["Team","Meeting notes from Monday","FYI","File in the shared folder and log the action items."],["Newsletter","Industry updates","FYI","Skim for items relevant to the client and forward one."]];
+const EC={Urgent:"r","Reply today":"w",Billing:"g",FYI:""};let ef="All";const ed=new Set();
+function inb(){const L=["All","Urgent","Reply today","Billing","FYI"];$("ibf").innerHTML=L.map(x=>`<button class="ob ${x===ef?"on":""}" data-f="${x}">${x}</button>`).join("");
+$("ibp").innerHTML=`${ed.size} of ${EM.length} handled<div class="bar2"><i style="width:${ed.size/EM.length*100}%"></i></div>`;
+$("ibl").innerHTML=EM.map((m,i)=>[m,i]).filter(([m])=>ef==="All"||m[2]===ef).map(([m,i])=>`<button class="mail ${ed.has(i)?"dn":""}" data-i="${i}"><div class="t"><span><b>${esc(m[0])}</b> · ${esc(m[1])}</span><em class="ch ${EC[m[2]]}" style="font-style:normal">${m[2]}</em></div><p class="ac">${ed.has(i)?"Done ✓ ":"My action: "}${esc(m[3])}</p></button>`).join("")}
+$("ibf").onclick=e=>{const b=e.target.closest("[data-f]");if(b){ef=b.dataset.f;inb()}};
+$("ibl").onclick=e=>{const b=e.target.closest("[data-i]");if(b){const i=+b.dataset.i;ed.has(i)?ed.delete(i):ed.add(i);inb()}};inb();
+const TK=[["Update CRM contacts",0],["Book client call",0],["Draft newsletter",0],["Weekly report",1],["Follow up on invoices",1],["Reconcile expenses",2],["Research vendors",2]],TC=["To do","In progress","Done"];
+function brd(){$("tcols").innerHTML=TC.map((c,ci)=>`<div class="tcol"><h4>${c} (${TK.filter(t=>t[1]===ci).length})</h4>${TK.map((t,i)=>[t,i]).filter(([t])=>t[1]===ci).map(([t,i])=>`<div class="tk"><button data-m="${i}:-1" ${ci===0?"disabled":""}>‹</button><span style="flex:1">${t[0]}</span><button data-m="${i}:1" ${ci===2?"disabled":""}>›</button></div>`).join("")}</div>`).join("")}
+$("tcols").onclick=e=>{const b=e.target.closest("[data-m]");if(b){const[i,d]=b.dataset.m.split(":").map(Number);TK[i][1]+=d;brd()}};brd();
+const MS=[[" maria  SANTOS ","0917-123-4567","Maria.Santos@Email.com ","makati"],["JOSE reyes","(0918) 765 4321"," jose.reyes@email.com","MANILA "],["ana de la cruz","+63 920 111 2222","ANA.CRUZ@email.com","quezon city"],["Maria Santos","09171234567","maria.santos@email.com","Makati City"],["paolo  garcia ","0933 555 0101","paolo.garcia@email","pasig"]],CT={"makati":"Makati City","makati city":"Makati City","manila":"Manila","quezon city":"Quezon City","pasig":"Pasig City"};let cl=false;
+function dcr(){let rows=MS,note="Messy sample list: extra spaces, mixed capitals, different phone formats, a duplicate, and a bad email.";
+if(cl){const seen=new Set();let dup=0,bad=0;rows=[];MS.forEach(r=>{const nm=r[0].trim().replace(/\s+/g," ").toLowerCase().replace(/\b\w/g,c=>c.toUpperCase()),dg=r[1].replace(/\D/g,""),rs=dg.startsWith("63")?dg.slice(2):dg.replace(/^0/,""),ph="+63 "+rs.slice(0,3)+" "+rs.slice(3,6)+" "+rs.slice(6),em=r[2].trim().toLowerCase(),ok=/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em);
+if(seen.has(em)){dup++;return}seen.add(em);if(!ok)bad++;rows.push([nm,ph,em+(ok?"":" (check)"),CT[r[3].trim().toLowerCase()]||r[3].trim()])});
+note=`${MS.length} rows in, ${rows.length} out. ${dup} duplicate removed, ${bad} email flagged for review.`}
+$("dct").innerHTML="<tr><th>Name</th><th>Phone</th><th>Email</th><th>City</th></tr>"+rows.map(r=>"<tr>"+r.map(v=>`<td>${cl?esc(v):`<span class="mono">"${esc(v)}"</span>`}</td>`).join("")+"</tr>").join("");
+$("dcn").textContent=note;$("dcb").textContent=cl?"Reset":"Clean data"}
+$("dcb").onclick=()=>{cl=!cl;dcr()};dcr();
+const PH=[["2012 to 2018","Customer operations","Customer service and escalations across banking, credit cards, food delivery, and online gaming support.","Clear communication, calm problem solving, and speed under pressure."],["2019 to 2024","Quality and compliance, healthcare begins","Started in healthcare revenue cycle at EXL (prior authorization quality and compliance), then audited and coached at Uber and Foundever.","My healthcare foundation, plus an eye for accuracy, root causes, and coaching people to improve."],["2024 to 2026","Sales and client solutions","Inbound and outbound sales calls for logistics and healthcare accounts at Concentrix.","Needs discovery, objection handling, and customer retention."],["2026 to now","Back in healthcare revenue cycle","Quality audits of AR follow-up and medical billing at Access Healthcare, building on where I started at EXL in 2019.","Payer rules, denial patterns, and compliant documentation."]];
+$("pth").innerHTML=PH.map((s,i)=>`<button data-i="${i}"><b>${s[0]}</b>${esc(s[1])}</button>`).join("");
+function ph(i){[...$("pth").children].forEach((b,k)=>b.classList.toggle("on",k===i));$("pthp").innerHTML=`<div><small>What I did</small><p>${esc(PH[i][2])}</p></div><div><small>What I took forward</small><p>${esc(PH[i][3])}</p></div>`}
+$("pth").onclick=e=>{const b=e.target.closest("button");if(b)ph(+b.dataset.i)};ph(3);
 const io="IntersectionObserver" in window?new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.1}):null;
 document.querySelectorAll(".rv").forEach(el=>io?io.observe(el):el.classList.add("in"));
 </script>
