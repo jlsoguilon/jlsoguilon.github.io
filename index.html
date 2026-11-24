@@ -28,7 +28,7 @@ h1{font-size:clamp(44px,10vw,112px);line-height:1.08;padding-bottom:.08em;letter
 .btn{display:inline-block;padding:13px 26px;border-radius:99px;background:var(--glow);color:#fff;text-decoration:none;font-weight:600;margin:4px}
 .btn.alt{background:transparent;color:var(--glow);border:1px solid var(--glow)}
 .hero>*{opacity:0;animation:up 1.1s cubic-bezier(.2,.7,.2,1) forwards}
-.hero>:nth-child(2){animation-delay:.25s}.hero>:nth-child(3){animation-delay:.5s}.hero>:nth-child(4){animation-delay:.75s}.hero>:nth-child(5){animation-delay:1s}.hero>:nth-child(6){animation-delay:1.25s}.hero>:nth-child(7){animation-delay:1.5s}.hero>:nth-child(8){animation-delay:1.7s}
+.hero>:nth-child(2){animation-delay:.25s}.hero>:nth-child(3){animation-delay:.5s}.hero>:nth-child(4){animation-delay:.75s}.hero>:nth-child(5){animation-delay:1s}.hero>:nth-child(6){animation-delay:1.25s}.hero>:nth-child(7){animation-delay:1.5s}.hero>:nth-child(8){animation-delay:1.7s}.hero>:nth-child(9){animation-delay:1.9s}
 @keyframes up{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
 section{padding:110px 0 20px}
 .act{font-size:12px;letter-spacing:.35em;text-transform:uppercase;color:var(--glow);margin:0 0 14px}
@@ -186,34 +186,129 @@ mark:nth-of-type(3){background-image:linear-gradient(100deg,#ff9f0a,#ff375f,#ff9
 button.chip{font:inherit;font-size:15px;cursor:pointer;transition:.2s}.chip.on{background:var(--c,var(--glow));color:#fff;border-color:var(--c,var(--glow))}
 .skp{margin-top:8px;border:1px solid var(--glow);border-radius:20px;padding:18px 22px;box-shadow:0 0 40px var(--spot);font-size:18px;line-height:1.5}
 @media (prefers-reduced-motion:reduce){mark{animation:none}}
+#credentials{--glow:#30d158;--spot:rgba(48,209,88,.2)}
+#start{--glow:#0a84ff;--spot:rgba(10,132,255,.25)}
+.bento,.lk{position:relative}
+.bento::after,.lk::after{content:"";position:absolute;inset:0;border-radius:inherit;background:radial-gradient(260px circle at var(--mx,50%) var(--my,50%),rgba(255,255,255,.09),transparent 60%);opacity:0;transition:opacity .3s;pointer-events:none}
+.bento:hover::after,.lk:hover::after{opacity:1}
+.btn{position:relative;overflow:hidden;transition:transform .4s,box-shadow .3s}.btn:hover{box-shadow:0 10px 36px var(--spot)}.btn.mg{transition:transform .15s}
+.rp{position:absolute;width:10px;height:10px;margin:-5px;border-radius:50%;background:rgba(255,255,255,.55);animation:rp .6s ease-out forwards;pointer-events:none}
+@keyframes rp{to{transform:scale(28);opacity:0}}
+.flip{padding:0!important;perspective:1100px;cursor:pointer}
+.fi{position:relative;min-height:275px;transform-style:preserve-3d;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.flip.on .fi{transform:rotateY(180deg)}
+.ft,.bk{position:absolute;inset:0;padding:26px;border-radius:24px;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.bk{transform:rotateY(180deg);display:flex;flex-direction:column;gap:6px;background:linear-gradient(145deg,color-mix(in srgb,var(--glow) 28%,var(--card)),var(--card));border:1px solid var(--glow)}
+.bk small{letter-spacing:.2em;font-size:10px;color:var(--mute)}.bk b{font-size:17px;line-height:1.3;margin-bottom:6px}.bk .btn{margin-top:auto;font-size:14px;padding:9px 16px;align-self:flex-start}
+.hint{position:absolute;bottom:16px;left:26px;font-size:12px;color:var(--mute);font-style:normal}
+#start .bento{cursor:pointer}.more{max-height:0;overflow:hidden;opacity:0;transition:max-height .5s,opacity .5s,margin .5s;margin:0!important}.open .more{max-height:180px;opacity:1;margin-top:10px!important}
+.job{transition:transform .3s}.job:hover{transform:translateX(8px)}
+.chip{transition:transform .2s}.chip:hover{transform:translateY(-3px) scale(1.06)}
+.tabs2 button{transition:transform .2s,background .2s}.tabs2 button:hover{transform:translateY(-2px)}
+#edu img{cursor:zoom-in}
+.fab.on{animation:pf 3s ease-in-out infinite}@keyframes pf{50%{box-shadow:0 10px 60px var(--spot),0 0 0 8px rgba(10,132,255,.14)}}
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:45;background:var(--card);border:1px solid var(--glow);border-radius:99px;padding:10px 12px 10px 20px;display:flex;gap:14px;align-items:center;box-shadow:0 10px 40px rgba(0,0,0,.4)}.toast[hidden]{display:none}
+.toast button{font:inherit;font-size:14px;background:var(--glow);color:#fff;border:0;border-radius:99px;padding:6px 14px;cursor:pointer}
+.cf{position:fixed;width:8px;height:12px;z-index:50;border-radius:2px;pointer-events:none;animation:cf 1s ease-out forwards}
+@keyframes cf{to{transform:translate(var(--dx),calc(var(--dy) + 260px)) rotate(var(--r));opacity:0}}
+@media (prefers-reduced-motion:reduce){.fi,.more,.fab.on,.cf,.rp{animation:none;transition:none}.flip.on .fi{transform:none}.flip.on .ft{display:none}.flip:not(.on) .bk{display:none}.flip.on .bk{transform:none}}
+#proof{--glow:#ff375f;--spot:rgba(255,55,95,.22)}
+.mode{display:inline-flex;gap:4px;padding:4px;border:1px solid var(--line);border-radius:99px;margin:0 0 22px}
+.mode button{font:inherit;font-size:13px;border:0;background:none;color:var(--mute);padding:6px 16px;border-radius:99px;cursor:pointer;transition:.2s}
+.mode button.on{background:linear-gradient(135deg,#0a84ff,#bf5af2);color:#fff}
+
+:root[data-mode="sales"]{--glow:#ff6a3d;--spot:rgba(255,106,61,.28)}
+@media (prefers-color-scheme:light){:root[data-mode="sales"]:not([data-theme="dark"]){--glow:#d9480f}}
+html[data-mode="sales"] h1{background:linear-gradient(100deg,var(--ink) 0%,#ff6a3d 40%,#f43f5e 70%,#ffc233 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+html[data-mode="sales"] mark{background-image:linear-gradient(100deg,#ff6a3d,#f43f5e,#ff6a3d)}
+html[data-mode="sales"] mark:nth-of-type(2){background-image:linear-gradient(100deg,#ff9f0a,#ff6a3d,#ff9f0a)}
+html[data-mode="sales"] mark:nth-of-type(3){background-image:linear-gradient(100deg,#f43f5e,#ffc233,#f43f5e)}
+html[data-mode="sales"] .orbs::before{background:radial-gradient(circle,#ff6a3d,transparent 65%)}
+html[data-mode="sales"] .orbs::after{background:radial-gradient(circle,#f43f5e,transparent 65%)}
+html[data-mode="sales"] .orbs i{background:radial-gradient(circle,#ffc233,transparent 65%)}
+html[data-mode="sales"] .btn:not(.alt),html[data-mode="sales"] .fab,html[data-mode="sales"] .mode button.on{background:linear-gradient(135deg,#ff6a3d,#f43f5e)}
+html[data-mode="sales"] #bar{background:linear-gradient(90deg,#ff6a3d,#ffc233)}
+html[data-mode="sales"] .pn,html[data-mode="sales"] .app{--a:#ff6a3d}
+html[data-mode="sales"] #services{--glow:#ff6a3d;--spot:rgba(255,106,61,.25)}
+html[data-mode="sales"] #journey{--glow:#f43f5e;--spot:rgba(244,63,94,.25)}
+html[data-mode="sales"] #experience{--glow:#ff9f0a;--spot:rgba(255,159,10,.22)}
+html[data-mode="sales"] #demos{--glow:#ff6a3d;--spot:rgba(255,106,61,.25)}
+html[data-mode="sales"] #proof,html[data-mode="sales"] #start{--glow:#f43f5e;--spot:rgba(244,63,94,.25)}
+html[data-mode="sales"] #credentials{--glow:#ffc233;--spot:rgba(255,194,51,.2)}
+html[data-mode="sales"] main:nth-of-type(2) section:nth-of-type(1){--glow:#ff9f0a;--spot:rgba(255,159,10,.22)}
+html[data-mode="sales"] #contact{--glow:#ff6a3d;--spot:rgba(255,106,61,.25)}
+html[data-mode="sales"] .stats b{background-image:linear-gradient(135deg,#ff6a3d,#f43f5e)}
+html[data-mode="sales"] .stats div:nth-child(2) b{background-image:linear-gradient(135deg,#ff9f0a,#ffc233)}
+html[data-mode="sales"] .stats div:nth-child(3) b{background-image:linear-gradient(135deg,#f43f5e,#ff9f0a)}
 </style>
 </head>
 <body>
 <div id="bar"></div>
 <div class="orbs" aria-hidden="true"><i></i></div>
-<nav><div class="wrap"><b id="nm"></b><div><a href="#services">Services</a><a href="#journey">Claim journey</a><a href="#demos">Projects</a><a href="#experience">Experience</a><a href="#contact">Contact</a><button id="th" aria-label="Toggle light or dark">◐</button></div></div></nav>
+<nav><div class="wrap"><b id="nm"></b><div><a href="#services">Services</a><a href="#experience">Experience</a><a href="#demos">Projects</a><a href="#contact">Contact</a><button id="th" aria-label="Toggle light or dark">◐</button></div></div></nav>
 <header class="hero">
 <div class="ph" role="img" aria-label="Portrait of John Leigh Soguilon"></div>
 <p class="badge"><i></i><span id="clk">Open to Healthcare VA roles</span></p>
-<p class="eye">Detail-driven. Quality-minded. Healthcare-ready.</p>
+<div class="mode" id="mode"><button class="on" data-m="va">Healthcare VA</button><button data-m="sales">Sales role</button></div>
+<p class="eye" id="eye">Detail-driven. Quality-minded. Healthcare-ready.</p>
 <h1 id="name"></h1>
 <p class="tag" id="tag"></p>
 <p class="rot">I help with <b id="rot"></b></p>
-<p class="quote">“Streamlining your operations so you can focus on what matters most.”</p>
-<div><a class="btn" href="#contact">Get in touch</a></div>
+<p class="quote" id="qt">“Streamlining your operations so you can focus on what matters most.”</p>
+<div><a class="btn" href="#contact">Get in touch</a><a class="btn alt" id="cta2" href="#services">See what I can do</a></div>
 </header>
 <main class="wrap">
 <section style="padding-top:60px"><p class="state rv" id="sum"></p>
-<p class="act rv" style="margin:40px 0 12px">My path</p><p class="mute rv" style="margin:0 0 18px">Tap a stage to see how my career grew.</p>
-<div class="steps rv" id="pth"></div><div class="panel rv" id="pthp"></div>
+<p class="mute sm rv" style="margin:0 0 10px">Worked with teams at</p><div class="rv" id="cos"></div>
+<div class="stats rv" id="res" style="margin-top:36px"><div><b><span data-n="75">75</span></b>audits a day</div><div><b><span data-n="50">50</span></b>invoices a day when on invoice work</div><div><b><span data-n="97">97</span>%+</b>accuracy and QA score</div></div>
+<p class="mute sm rv" style="margin-top:12px">Typical daily output and quality.</p>
+
 </section>
-<section id="services"><p class="act rv">Act I</p><h2 class="rv">What I can do for you.</h2><div class="grid" id="svc"></div></section>
-<section id="journey"><p class="act rv">Interactive</p><h2 class="rv">Follow the claim.</h2>
-<p class="mute rv" style="margin:0 0 30px;max-width:640px">Tap each stage to see what happens to a healthcare claim, and where I come in.</p>
+<section id="services"><p class="act rv">Services</p><h2 class="rv">What I can do for you.</h2><div class="grid" id="svc"></div></section>
+<section id="journey"><p class="act rv" id="jyA">Revenue cycle</p><h2 class="rv" id="jyH">Where I fit in a claim’s journey.</h2>
+<p class="mute rv" id="jyP" style="margin:0 0 30px;max-width:640px">Tap each stage to see what happens to a healthcare claim, and where I come in.</p>
 <div class="steps rv" id="steps"></div><div class="panel rv" id="panel"></div></section>
-<section id="demos"><p class="act rv">Act II</p><h2 class="rv">Things I build and can do.</h2>
+<section id="experience"><p class="act rv">Experience</p><h2 class="rv">My career path.</h2><p class="act rv" style="margin:40px 0 12px">Career stages</p><p class="mute rv" style="margin:0 0 18px">Tap a stage to see how my career grew.</p>
+<div class="steps rv" id="pth"></div><div class="panel rv" id="pthp"></div>
+<p class="act rv" style="margin:40px 0 12px">Work history</p><div id="jobs"></div></section>
+<section id="proof" hidden><p class="act rv">Recommendations</p><h2 class="rv">What people say.</h2><div class="grid" id="tms"></div></section>
+<section id="demos"><p class="act rv">Portfolio</p><h2 class="rv">Things I build and can do.</h2>
 <p class="mute rv" style="margin:0 0 28px;max-width:660px">Interactive demos built with sample data, not client information. Explore the dashboards, browse my work samples, or copy the macro.</p>
-<div class="tabs2 rv" id="tabs2"><button class="on" data-t="tp">Team performance</button><button data-t="ar">AR dashboard</button><button data-t="ws">Work samples</button><button data-t="sc">Scheduling</button><button data-t="ib">Inbox triage</button><button data-t="tb">Task board</button><button data-t="dc">Data cleanup</button><button data-t="mac">Excel macro</button><button data-t="tpl">VA templates</button><button data-t="cr" id="crTab" hidden>Creative work</button></div>
+<div class="tabs2 rv" id="tabs2"><button data-t="sd" hidden>Sales dashboard</button><button class="on" data-t="tp">Team performance</button><button data-t="ar">AR dashboard</button><button data-t="ws">Work samples</button><button data-t="sc">Scheduling</button><button data-t="ib">Inbox triage</button><button data-t="tb">Task board</button><button data-t="dc">Data cleanup</button><button data-t="mac">Excel macro</button><button data-t="tpl">VA templates</button><button data-t="cs" hidden>Call scripts</button><button data-t="cr" id="crTab" hidden>Creative work</button></div>
+<div class="bento rv pn" id="pn-sd" hidden><div class="ctl"><label for="sdp">Product</label><select id="sdp"><option>All</option><option>Moving and storage</option><option>Healthcare plans</option><option>E-commerce</option></select><label for="sdw">Period</label><select id="sdw"><option value="4">Last 4 weeks</option><option value="12">Last 12 weeks</option></select><span class="mute">Sample data</span></div><div class="kg" id="sdk"></div><div class="cg"><div class="c2"><h4>Conversion rate by week (target 18%)</h4><div id="sdl"></div></div><div class="c2"><h4>Sales funnel</h4><div id="sdf"></div></div></div><div class="c2"><h4>Top objections heard</h4><div id="sdo"></div></div></div>
+<div class="bento rv pn" id="pn-cs" hidden><p class="mute sm">Sample scripts I would adapt to your product and tone.</p>
+<details open><summary>Opening and discovery questions</summary><pre>Opening:
+\u201cHi [Name], this is John Leigh from [Company]. Thanks for reaching out.
+Do you have a few minutes so I can understand what you are looking for?\u201d
+
+Discovery:
+1. What made you reach out today?
+2. What have you tried so far?
+3. What matters most: price, speed, or service?
+4. When do you need this done?
+5. Who else is involved in the decision?</pre></details>
+<details><summary>\u201cIt is too expensive\u201d</summary><pre>\u201cI understand, and I want to make sure it is worth it for you.
+Can I ask what you are comparing it to?\u201d
+
+Then: confirm what is included, offer a smaller option if one exists,
+and restate the value that matters most to them.</pre></details>
+<details><summary>\u201cI need to think about it\u201d</summary><pre>\u201cOf course. So I can help, which part would you like to think through:
+the price, the timing, or something else?\u201d
+
+Then: answer the real concern, or agree on a specific follow-up day and time.</pre></details>
+<details><summary>Follow-up email after a call</summary><pre>Subject: Following up on our call
+
+Hi [Name],
+
+Thank you for your time today. Here is a quick recap:
+- What you need: [need]
+- What I recommend: [option]
+- Next step: [action and date]
+
+Reply here with any questions and I will help right away.
+
+Best,
+John Leigh</pre></details></div>
 <div class="bento rv pn app" id="pn-tp"><aside class="side" id="side"></aside><div class="mainp"><div class="top"><div><h3>Team performance</h3><span class="mute sm">Revenue cycle QA · sample data</span></div><div class="ctl"><select id="tm" aria-label="Team"><option>All</option><option>Alpha</option><option>Bravo</option></select><select id="pd" aria-label="Period"><option value="4">Last 4 weeks</option><option value="12">Last 12 weeks</option></select><span class="av">JL</span></div></div><div class="bd" id="tpv"></div></div></div>
 <div class="bento rv pn" id="pn-ws" hidden><div class="wsg" id="ws"></div></div>
 <div class="bento rv pn" id="pn-ar" hidden><div class="ctl"><label for="payer">Payer</label><select id="payer"><option>All</option><option>Payer A</option><option>Payer B</option><option>Payer C</option></select><span class="mute">Sample data</span></div>
@@ -273,14 +368,15 @@ Reply with the one that works and I will send the calendar invite with the meeti
 </main>
 <div class="mq" aria-hidden="true"><div class="track" id="track"></div></div>
 <main class="wrap">
-<section><p class="act rv">Skills</p><h2 class="rv">Built for healthcare.</h2><div class="rv" id="skills"></div></section>
-<section id="experience"><p class="act rv">Act III</p><h2 class="rv">The experience.</h2><div id="jobs"></div></section>
-<section><p class="act rv">Credentials</p><h2 class="rv">Education and training.</h2><div class="grid" id="edu"></div></section>
-<section id="contact"><p class="act rv">Final act</p><p class="big rv">Let’s work together.</p><div class="plan rv"><p class="hl2">Build your support request</p><p class="mute">Tap what you need, then send it to me in one click.</p><div id="pick"></div><a class="btn" id="req" href="#">Email my request</a></div>
+<section><p class="act rv">Skills and tools</p><h2 class="rv">What I bring to your team.</h2><div class="rv" id="skills"></div></section>
+<section id="credentials"><p class="act rv">Credentials</p><h2 class="rv">Education and training.</h2><div class="grid" id="edu"></div></section>
+<section id="start"><p class="act rv">Getting started</p><h2 class="rv">How we start.</h2><div class="grid"><div class="bento rv"><span class="n">01</span><h3>Tell me what you need</h3><p>Use the request builder below or message me. A few lines is enough.</p><p class="more">Tell me the tasks, the tools you use, and the hours you need. Not sure yet? Pick from the request builder and we will fill in the gaps together.</p></div><div class="bento rv"><span class="n">02</span><h3>We agree on scope</h3><p>A quick call or message to confirm tasks, tools, and hours. A short trial task is welcome.</p><p class="more">We agree on a clear task list, how you want updates, and the working hours. A small trial task lets you see my work first.</p></div><div class="bento rv"><span class="n">03</span><h3>I get to work</h3><p>I start with clear notes and send regular updates so you always know where things stand.</p><p class="more">I follow your checklist, document what I do, and send short summaries on the schedule we set.</p></div></div></section>
+<section id="contact"><p class="act rv">Contact</p><p class="big rv">Let’s work together.</p><div class="plan rv"><p class="hl2">Build your support request</p><p class="mute">Tap what you need, then send it to me in one click.</p><div id="pick"></div><a class="btn" id="req" href="#">Email my request</a></div>
 <div class="tree" id="tree"></div></section>
 </main>
 <a class="fab" id="fab" href="#contact">Hire me ↗</a>
 <div id="lb" hidden><img alt=""></div>
+<div id="toast" class="toast" role="status" hidden></div>
 <footer><div class="wrap" id="foot"></div></footer>
 <script>
 /* ===== EDIT YOUR CONTENT HERE (or ask Claude to change it) ===== */
@@ -321,23 +417,23 @@ const DATA = {
   references: "References available upon request.",
   /* Add your real creative work here, then it appears on the site. Example:
      creative: [{t:"AI video: Manila skyline", p:"15-second clip made with AI tools", url:"https://youtu.be/XXXX", img:""}], */
-  creative: []
+  creative: [],
+  /* Add real recommendations here and a section appears on the site. Example:
+     testimonials: [{q:"Short quote from a supervisor or colleague.", n:"Full name", r:"Role, Company"}] */
+  testimonials: []
 };
 /* ===== END EDITABLE CONTENT ===== */
 const $=id=>document.getElementById(id);
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-const D=DATA;
-$("nm").textContent=D.name;$("name").textContent=D.name;$("tag").textContent=D.tagline;$("sum").innerHTML="Healthcare professional who grew from <mark>12+ years of BPO operations</mark> into <mark>5+ years of quality and compliance</mark>, now specializing in <mark>healthcare revenue cycle management</mark>, a field I entered at EXL in 2019.";
+const D=DATA;let SVC=D.projects,SUBJ="Healthcare VA inquiry";
+$("nm").textContent=D.name;$("name").textContent=D.name;$("tag").textContent=D.tagline;$("sum").innerHTML="<mark>12+ years</mark> in BPO and customer operations.<br><mark>5+ years</mark> in quality and compliance.<br><mark>Revenue Cycle Management</mark> since 2019.";
 
-$("svc").innerHTML=D.projects.map((p,i)=>`<div class="bento rv"><span class="n">${String(i+1).padStart(2,"0")}</span><h3>${esc(p.t)}</h3><p>${esc(p.p)}</p></div>`).join("");
 const tl=D.tools.flatMap(g=>g[1]);
 $("track").innerHTML=[...tl,...tl].map(x=>`<span>${esc(x)}</span>`).join("");
-$("skills").innerHTML=D.skills.map(s=>`<span class="chip">${esc(s)}</span>`).join("");
-$("jobs").innerHTML=D.jobs.map(j=>`<div class="job rv"><div class="d">${esc(j[0])}</div><div><h3>${esc(j[2])}</h3><div class="c">${esc(j[1])}</div><p>${esc(j[3])}</p></div></div>`).join("");
 $("edu").innerHTML=D.education.map(e=>`<div class="bento rv"><span class="n">${esc(e[0])}</span><h3>${esc(e[1])}</h3><p>${esc(e[2])}</p></div>`).join("")+D.certs.map(c=>`<div class="bento rv"><img src="${c.img}" alt="${esc(c.t)}" style="width:100%;border-radius:12px;margin-bottom:14px"><h3>${esc(c.t)}</h3><p>${esc(c.p)}</p></div>`).join("");
 $("tree").innerHTML=D.links.map(l=>`<a class="lk rv" href="${esc(l.url)}" target="_blank" rel="noopener"><span class="i">${esc(l.icon)}</span><span><b>${esc(l.label)}</b><small>${esc(l.sub)}</small></span><em>↗</em></a>`).join("");
 $("foot").textContent="© "+new Date().getFullYear()+" "+D.name+" · "+D.location;
-const J=[["Claim submitted","Clean claims start with verified insurance and eligibility.","Insurance verification, eligibility checks, and accurate patient and payer details."],
+let J=[["Claim submitted","Clean claims start with verified insurance and eligibility.","Insurance verification, eligibility checks, and accurate patient and payer details."],
 ["Payer review","The payer reviews the claim, then pays, pends, or denies it.","Claim status checks through payer portals and follow-up, with every response documented."],
 ["Denial or short pay","EOBs and ERAs explain why a claim did not pay in full.","Reviewing EOBs/ERAs, finding the denial reason, and lining up the next action."],
 ["Follow-up","Timely follow-up keeps revenue from slipping through the cracks.","Payer follow-up and resolution actions, with clear notes on every touch."],
@@ -346,17 +442,16 @@ $("steps").innerHTML=J.map((s,i)=>`<button onclick="step(${i})"><b>0${i+1}</b>${
 function step(i){[...$("steps").children].forEach((b,k)=>b.classList.toggle("on",k===i));$("panel").innerHTML=`<div><small>What happens</small><p>${esc(J[i][1])}</p></div><div><small>Where I come in</small><p>${esc(J[i][2])}</p></div>`}
 step(0);
 const sel=new Set();
-$("pick").innerHTML=D.projects.map((p,i)=>`<button data-i="${i}">${esc(p.t)}</button>`).join("");
-function upd(){const l=[...sel].map(i=>"- "+D.projects[i].t).join("\n");
-$("req").href="mailto:"+D.email+"?subject="+encodeURIComponent("Healthcare VA inquiry")+"&body="+encodeURIComponent("Hi John,\n\nI am looking for help with:\n"+(l||"- ")+"\n\nMy name and company:\n\nThanks!")}
+function upd(){const l=[...sel].map(i=>"- "+SVC[i].t).join("\n");
+$("req").href="mailto:"+D.email+"?subject="+encodeURIComponent(SUBJ)+"&body="+encodeURIComponent("Hi John,\n\nI am looking for help with:\n"+(l||"- ")+"\n\nMy name and company:\n\nThanks!")}
 $("pick").onclick=e=>{const b=e.target.closest("button");if(!b)return;const i=+b.dataset.i;sel.has(i)?sel.delete(i):sel.add(i);b.classList.toggle("on");upd()};upd();
-const tick=()=>{const o={hour:"numeric",minute:"2-digit"},n=new Date();$("clk").textContent="Open to Healthcare VA roles · Manila "+n.toLocaleTimeString("en-US",{...o,timeZone:"Asia/Manila"})+" · your time "+n.toLocaleTimeString([],o)};
+let BT="Open to Healthcare VA roles";const tick=()=>{const o={hour:"numeric",minute:"2-digit"},n=new Date();$("clk").textContent=BT+" · Manila "+n.toLocaleTimeString("en-US",{...o,timeZone:"Asia/Manila"})+" · your time "+n.toLocaleTimeString([],o)};
 try{tick();setInterval(tick,30000)}catch(e){}
-const W=["AR follow-up","claims status checks","denial follow-up","insurance verification","quality audits","scheduling and admin"],rt=$("rot");let wi=0,ci=0,dl=false;
+let W=["AR follow-up","claims status checks","denial follow-up","insurance verification","quality audits","scheduling and admin"],rt=$("rot");let wi=0,ci=0,dl=false;
 if(matchMedia("(prefers-reduced-motion:reduce)").matches)rt.textContent=W[0];else(function ty(){const w=W[wi];ci+=dl?-1:1;rt.textContent=w.slice(0,ci);let t=dl?35:70;if(!dl&&ci===w.length){dl=true;t=1400}else if(dl&&ci===0){dl=false;wi=(wi+1)%W.length;t=300}setTimeout(ty,t)})();
 const hero=document.querySelector(".hero");
 hero.addEventListener("mousemove",e=>{const r=hero.getBoundingClientRect();hero.style.setProperty("--mx",e.clientX-r.left+"px");hero.style.setProperty("--my",e.clientY-r.top+"px")});
-document.addEventListener("mousemove",e=>{const c=e.target.closest&&e.target.closest(".bento");document.querySelectorAll(".bento.t").forEach(x=>{if(x!==c){x.style.transform="";x.classList.remove("t")}});if(c){const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.classList.add("t");c.style.transform=`perspective(700px) rotateX(${-y*8}deg) rotateY(${x*8}deg) translateY(-4px)`}});
+document.addEventListener("mousemove",e=>{const c=e.target.closest&&e.target.closest(".bento:not(.pn):not(.flip.on)");document.querySelectorAll(".bento.t").forEach(x=>{if(x!==c){x.style.transform="";x.classList.remove("t")}});if(c){const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.classList.add("t");c.style.transform=`perspective(700px) rotateX(${-y*8}deg) rotateY(${x*8}deg) translateY(-4px)`}});
 addEventListener("scroll",()=>{const d=document.documentElement;$("bar").style.width=(scrollY/Math.max(1,d.scrollHeight-innerHeight)*100)+"%";$("fab").classList.toggle("on",scrollY>600)},{passive:true});
 $("th").onclick=()=>{const r=document.documentElement,dark=r.dataset.theme?r.dataset.theme==="dark":!matchMedia("(prefers-color-scheme:light)").matches;r.dataset.theme=dark?"light":"dark"};
 const cn=document.querySelector(".stats");
@@ -371,7 +466,7 @@ $("kp").innerHTML=[["$"+tot.toLocaleString(),"Total AR"],[Math.round((a[3]+a[4])
 $("bars").innerHTML=a.map((v,i)=>{const hh=v/mx*140,x=22+i*98;return `<g><rect x="${x}" y="${170-hh}" width="68" height="${hh}" rx="9" fill="${BC[i]}"><title>${BK[i]} days: $${v.toLocaleString()}</title></rect><text x="${x+34}" y="${162-hh}" text-anchor="middle" font-size="12" style="fill:var(--ink)">$${Math.round(v/1000)}k</text><text x="${x+34}" y="192" text-anchor="middle" font-size="12" style="fill:var(--mute)">${BK[i]}</text></g>`}).join("");
 $("dn").innerHTML=dl.map(([m,v])=>`<div class="dn"><span>${esc(m)}</span><i style="width:${v/md*100}%"></i><b>${v}</b></div>`).join("")}
 $("payer").onchange=dash;dash();
-$("tabs2").onclick=e=>{const b=e.target.closest("button");if(!b)return;[...$("tabs2").children].forEach(x=>x.classList.toggle("on",x===b));["tp","ar","ws","sc","ib","tb","dc","mac","tpl","cr"].forEach(t=>{$("pn-"+t).hidden=t!==b.dataset.t})};
+$("tabs2").onclick=e=>{const b=e.target.closest("button");if(!b)return;[...$("tabs2").children].forEach(x=>x.classList.toggle("on",x===b));["sd","cs","tp","ar","ws","sc","ib","tb","dc","mac","tpl","cr"].forEach(t=>{$("pn-"+t).hidden=t!==b.dataset.t})};
 $("cpy").onclick=async()=>{try{await navigator.clipboard.writeText($("vba").textContent);$("cpy").textContent="Copied!"}catch(e){const r=document.createRange();r.selectNodeContents($("vba"));const s=getSelection();s.removeAllRanges();s.addRange(r);$("cpy").textContent="Selected: press Ctrl+C"}};
 if(D.creative&&D.creative.length){$("crTab").hidden=false;$("cgrid").innerHTML=D.creative.map(c=>`<div>${c.img?`<img src="${esc(c.img)}" alt="${esc(c.t)}">`:""}<h3>${esc(c.t)}</h3><p class="mute">${esc(c.p||"")}</p>${c.url?`<a class="btn" href="${esc(c.url)}" target="_blank" rel="noopener">Watch or view</a>`:""}</div>`).join("")}
 const AG=[["Agent 01","Alpha",97.4,58,1],["Agent 02","Alpha",96.1,54,2],["Agent 03","Alpha",95.2,61,3],["Agent 04","Alpha",93.8,49,5],["Agent 05","Bravo",95.9,57,2],["Agent 06","Bravo",93.5,52,4],["Agent 07","Bravo",92.1,47,6],["Agent 08","Bravo",90.7,44,8]];
@@ -434,10 +529,10 @@ function inb(){const L=["All","Urgent","Reply today","Billing","FYI"];$("ibf").i
 $("ibp").innerHTML=`${ed.size} of ${EM.length} handled<div class="bar2"><i style="width:${ed.size/EM.length*100}%"></i></div>`;
 $("ibl").innerHTML=EM.map((m,i)=>[m,i]).filter(([m])=>ef==="All"||m[2]===ef).map(([m,i])=>`<button class="mail ${ed.has(i)?"dn":""}" data-i="${i}"><div class="t"><span><b>${esc(m[0])}</b> · ${esc(m[1])}</span><em class="ch ${EC[m[2]]}" style="font-style:normal">${m[2]}</em></div><p class="ac">${ed.has(i)?"Done ✓ ":"My action: "}${esc(m[3])}</p></button>`).join("")}
 $("ibf").onclick=e=>{const b=e.target.closest("[data-f]");if(b){ef=b.dataset.f;inb()}};
-$("ibl").onclick=e=>{const b=e.target.closest("[data-i]");if(b){const i=+b.dataset.i;ed.has(i)?ed.delete(i):ed.add(i);inb()}};inb();
+$("ibl").onclick=e=>{const b=e.target.closest("[data-i]");if(b){const i=+b.dataset.i;ed.has(i)?ed.delete(i):ed.add(i);inb();if(ed.size===EM.length)confetti(e.clientX,e.clientY)}};inb();
 const TK=[["Update CRM contacts",0],["Book client call",0],["Draft newsletter",0],["Weekly report",1],["Follow up on invoices",1],["Reconcile expenses",2],["Research vendors",2]],TC=["To do","In progress","Done"];
 function brd(){$("tcols").innerHTML=TC.map((c,ci)=>`<div class="tcol"><h4>${c} (${TK.filter(t=>t[1]===ci).length})</h4>${TK.map((t,i)=>[t,i]).filter(([t])=>t[1]===ci).map(([t,i])=>`<div class="tk"><button data-m="${i}:-1" ${ci===0?"disabled":""}>‹</button><span style="flex:1">${t[0]}</span><button data-m="${i}:1" ${ci===2?"disabled":""}>›</button></div>`).join("")}</div>`).join("")}
-$("tcols").onclick=e=>{const b=e.target.closest("[data-m]");if(b){const[i,d]=b.dataset.m.split(":").map(Number);TK[i][1]+=d;brd()}};brd();
+$("tcols").onclick=e=>{const b=e.target.closest("[data-m]");if(b){const[i,d]=b.dataset.m.split(":").map(Number);TK[i][1]+=d;brd();if(TK.every(t=>t[1]===2))confetti(e.clientX,e.clientY)}};brd();
 const MS=[[" maria  SANTOS ","0917-123-4567","Maria.Santos@Email.com ","makati"],["JOSE reyes","(0918) 765 4321"," jose.reyes@email.com","MANILA "],["ana de la cruz","+63 920 111 2222","ANA.CRUZ@email.com","quezon city"],["Maria Santos","09171234567","maria.santos@email.com","Makati City"],["paolo  garcia ","0933 555 0101","paolo.garcia@email","pasig"]],CT={"makati":"Makati City","makati city":"Makati City","manila":"Manila","quezon city":"Quezon City","pasig":"Pasig City"};let cl=false;
 function dcr(){let rows=MS,note="Messy sample list: extra spaces, mixed capitals, different phone formats, a duplicate, and a bad email.";
 if(cl){const seen=new Set();let dup=0,bad=0;rows=[];MS.forEach(r=>{const nm=r[0].trim().replace(/\s+/g," ").toLowerCase().replace(/\b\w/g,c=>c.toUpperCase()),dg=r[1].replace(/\D/g,""),rs=dg.startsWith("63")?dg.slice(2):dg.replace(/^0/,""),ph="+63 "+rs.slice(0,3)+" "+rs.slice(3,6)+" "+rs.slice(6),em=r[2].trim().toLowerCase(),ok=/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em);
@@ -450,6 +545,56 @@ const PH=[["2012 to 2018","Customer operations","Customer service and escalation
 $("pth").innerHTML=PH.map((s,i)=>`<button data-i="${i}"><b>${s[0]}</b>${esc(s[1])}</button>`).join("");
 function ph(i){[...$("pth").children].forEach((b,k)=>b.classList.toggle("on",k===i));$("pthp").innerHTML=`<div><small>What I did</small><p>${esc(PH[i][2])}</p></div><div><small>What I took forward</small><p>${esc(PH[i][3])}</p></div>`}
 $("pth").onclick=e=>{const b=e.target.closest("button");if(b)ph(+b.dataset.i)};ph(3);
+$("cos").innerHTML=["Access Healthcare","Concentrix","Foundever","Uber Philippines CoE","EXL Services"].map(x=>`<span class="chip">${esc(x)}</span>`).join("");
+const SVB=[["Fewer aging accounts and clear notes on every claim.","Payer portals, Excel"],["Cleaner claims from day one.","Payer portals, eligibility checks"],["Your daily operations stay organized.","Excel, Google Sheets, Asana"],["Clear numbers you can decide with.","Excel, Google Sheets"],["A calendar that runs without conflicts.","Google Calendar, Outlook, Calendly"],["Clients who feel heard and followed up.","CRM, email, phone"],["Files you can find in seconds.","Google Drive, Dropbox"],["Accurate records and tracked interactions.","HubSpot, CRM systems"],["An inbox under control.","Gmail, Outlook"],["Reliable, accurate records.","Excel, Google Sheets"],["Less manual work and fewer errors.","Zapier, IFTTT, Excel macros"],["Smooth meetings with no last-minute stress.","Google Meet, Calendly, Slack"]];
+function confetti(x,y){const c=["#0a84ff","#bf5af2","#ff375f","#ff9f0a","#30d158"];for(let i=0;i<28;i++){const s=document.createElement("i");s.className="cf";s.style.cssText=`left:${x}px;top:${y}px;background:${c[i%5]};--dx:${(Math.random()-.5)*320}px;--dy:${-80-Math.random()*200}px;--r:${Math.random()*720}deg`;document.body.appendChild(s);setTimeout(()=>s.remove(),1100)}}
+let tt;function toast(m){const t=$("toast");t.innerHTML=`<span>${m}</span><button>View my request</button>`;t.hidden=false;clearTimeout(tt);tt=setTimeout(()=>t.hidden=true,4500);t.querySelector("button").onclick=()=>{t.hidden=true;$("contact").scrollIntoView({behavior:"smooth"})}}
+function addReq(i){sel.add(i);const b=document.querySelector(`#pick [data-i="${i}"]`);if(b)b.classList.add("on");upd();toast("Added: "+esc(SVC[i].t))}
+$("svc").onclick=e=>{const a=e.target.closest("[data-add]");if(a){e.stopPropagation();addReq(+a.dataset.add);return}const c=e.target.closest(".flip");if(c)c.classList.toggle("on")};
+$("svc").onkeydown=e=>{if(e.key==="Enter"||e.key===" "){const c=e.target.closest(".flip");if(c&&e.target===c){e.preventDefault();c.classList.toggle("on")}}};
+$("start").onclick=e=>{const c=e.target.closest(".bento");if(c)c.classList.toggle("open")};
+$("edu").addEventListener("click",e=>{const i=e.target.closest("img");if(i){$("lb").firstChild.src=i.src;$("lb").hidden=false}});
+$("req").addEventListener("click",e=>{if(sel.size)confetti(e.clientX,e.clientY)});
+document.addEventListener("click",e=>{const b=e.target.closest(".btn");if(!b)return;const r=b.getBoundingClientRect(),s=document.createElement("span");s.className="rp";s.style.left=e.clientX-r.left+"px";s.style.top=e.clientY-r.top+"px";b.appendChild(s);setTimeout(()=>s.remove(),600)});
+document.addEventListener("pointermove",e=>{const t=e.target.closest?e.target:null;if(!t)return;const c=t.closest(".bento,.lk");if(c){const r=c.getBoundingClientRect();c.style.setProperty("--mx",e.clientX-r.left+"px");c.style.setProperty("--my",e.clientY-r.top+"px")}
+const m=t.closest(".btn");document.querySelectorAll(".btn.mg").forEach(x=>{if(x!==m){x.style.transform="";x.classList.remove("mg")}});if(m&&e.pointerType==="mouse"){const r=m.getBoundingClientRect();m.classList.add("mg");m.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.12}px,${(e.clientY-r.top-r.height/2)*.18}px)`}});
+if(D.testimonials&&D.testimonials.length){$("proof").hidden=false;$("tms").innerHTML=D.testimonials.map(t=>`<div class="bento rv"><p style="font-size:18px;line-height:1.5">\u201c${esc(t.q)}\u201d</p><p class="mute" style="margin-top:14px">${esc(t.n)}${t.r?", "+esc(t.r):""}</p></div>`).join("")}
+const SS=[{t:"Inbound Sales",p:"Handle inbound calls and turn inquiries into sales."},{t:"Outbound Sales and Follow-Up",p:"Reach out to leads, follow up on time, and keep deals moving."},{t:"Needs Discovery",p:"Ask the right questions to find what the customer really needs."},{t:"Objection Handling",p:"Answer concerns calmly and keep the conversation moving toward a decision."},{t:"Logistics Sales (Moving and Storage)",p:"Advise customers on moving and storage options and close the sale."},{t:"Healthcare Plan Sales Support",p:"Support customers with healthcare plan questions and next steps."},{t:"E-Commerce Orders and Support",p:"Process orders and support customers across e-commerce accounts."},{t:"CRM and Pipeline Management",p:"Keep leads, notes, and follow-ups updated so nothing is missed."},{t:"Customer Retention",p:"Resolve issues and follow up so customers come back."},{t:"Sales Quality and Coaching",p:"Review sales calls for quality and compliance and coach agents with clear feedback."},{t:"Sales Reporting",p:"Track calls, conversions, and follow-ups in clear reports."},{t:"Scheduling and Appointment Setting",p:"Book calls and demos and keep calendars conflict-free."}];
+const SSB=[["More inquiries turned into customers.","Phone, CRM, scripts"],["Fewer leads going cold.","CRM, email, phone"],["Offers that fit the customer.","Discovery questions, notes"],["More conversations that end in a yes.","Scripts, role-play"],["Clear quotes and smooth handoffs.","Phone, CRM"],["Customers who understand their options.","Phone, plan guides"],["Fewer order issues and happier buyers.","Shopify, email, chat"],["A clean, trustworthy pipeline.","HubSpot, CRM systems, Excel"],["Higher satisfaction and repeat business.","CRM, email, phone"],["Better calls and consistent quality.","Call audits, scorecards"],["Numbers you can act on.","Excel, Google Sheets"],["More meetings that actually happen.","Calendly, Google Calendar, Outlook"]];
+const SJ=[["Apr 2024 \u2013 Feb 2026","Concentrix Philippines","Sales Call Advisor II | Healthcare and Logistics Sales","Handled inbound and outbound sales calls for logistics (moving and storage) and healthcare accounts. Identified customer needs, delivered tailored solutions to convert inquiries into sales, and sustained high customer satisfaction and sales performance."],["May 2022 \u2013 Apr 2024","Foundever, Inc.","Quality Compliance Analyst | E-Commerce and Sales","Evaluated B2B and e-commerce sales interactions and coached agents on sales conversations. Took live calls and handled customer transactions alongside audits to stay hands-on with the process."],["May 2026 \u2013 Nov 2026","Access Healthcare","Quality Analyst II | Healthcare Revenue Cycle Management","Complete about 75 audits a day with 97%+ accuracy and QA score, and process up to 50 invoices a day on invoice work."],["Jan 2019 \u2013 Sep 2021","EXL Services Philippines Inc.","Quality Compliance Analyst | Healthcare, Prior Authorization","Monitored healthcare insurance interactions for compliance, analyzed trends, and coached agents."],["Sep 2021 \u2013 May 2022","Uber Philippines Centre of Excellence","Quality Compliance Analyst | Ride-Hailing Operations","Audited support interactions and gave actionable feedback to improve agent performance and customer experience."],["2012 \u2013 2018","Customer service and escalation roles","Finance, food delivery, and gaming support","Bayview Technologies, Open Access Marketing, West Contact Services, FIS Global Solutions, and MDS Call Solutions."]];
+const SJS=[["Lead comes in","Every sale starts with a customer reaching out, or a lead to contact.","Answering quickly, being friendly, and capturing the details in the CRM."],["Discovery","Good questions reveal what the customer actually needs.","Asking open questions, listening, and noting needs, budget, and timing."],["Solution","The right offer matches the need, not just the price.","Explaining options clearly and recommending the best fit."],["Objections","Concerns about price or timing are normal and often hide a question.","Answering calmly, checking understanding, and keeping the conversation moving."],["Close and follow-up","A clear next step and good follow-up turn interest into a customer.","Confirming details, scheduling next steps, and following up so customers stay."]];
+const VJ=J.slice();
+const SKS=["Inbound Sales","Outbound Sales","Consultative Selling","Needs Assessment","Objection Handling","Lead Follow-Up","Customer Retention","CRM Systems","HubSpot","Shopify","Call Monitoring and Coaching","Quality Reporting","E-Commerce Order Support","Logistics (Moving and Storage)","Healthcare Plans","Microsoft Office","Google Workspace","Calendly","Slack"];
+const START={va:[["Tell me what you need","Use the request builder below or message me. A few lines is enough.","Tell me the tasks, the tools you use, and the hours you need. Not sure yet? Pick from the request builder and we will fill in the gaps together."],["We agree on scope","A quick call or message to confirm tasks, tools, and hours. A short trial task is welcome.","We agree on a clear task list, how you want updates, and the working hours. A small trial task lets you see my work first."],["I get to work","I start with clear notes and send regular updates so you always know where things stand.","I follow your checklist, document what I do, and send short summaries on the schedule we set."]],sales:[["Tell me your goals","Share your product, your leads, and the targets you want to hit.","Tell me what you sell, who you sell to, and how success is measured. Not sure yet? Pick from the request builder."],["We align on scripts and tools","We agree on scripts, your CRM, call hours, and how results are reported.","I learn your offer and tone, set up the CRM workflow, and we agree on daily activity and reporting. A short role-play or trial is welcome."],["I start selling","I make calls, follow up on every lead, and report results on a schedule.","I keep the CRM updated, track calls and conversions, and send short summaries so you always know where the pipeline stands."]]};
+const MODES={va:{badge:"Open to Healthcare VA roles",tag:D.tagline,eye:"Detail-driven. Quality-minded. Healthcare-ready.",qt:"\u201cStreamlining your operations so you can focus on what matters most.\u201d",cta2:"See what I can do",cta2h:"#services",title:"John Leigh Soguilon | Healthcare Virtual Assistant",words:["AR follow-up","claims status checks","denial follow-up","insurance verification","quality audits","scheduling and admin"],sum:"<mark>12+ years</mark> in BPO and customer operations.<br><mark>5+ years</mark> in quality and compliance.<br><mark>Revenue Cycle Management</mark> since 2019.",stage:3,svc:D.projects,svb:SVB,subj:"Healthcare VA inquiry",j:VJ,jyA:"Revenue cycle",jyH:"Where I fit in a claim\u2019s journey.",jyP:"Tap each stage to see what happens to a healthcare claim, and where I come in.",skills:D.skills,stats:[[75,"","audits a day"],[50,"","invoices a day when on invoice work"],[97,"%+","accuracy and QA score"]],start:START.va},sales:{badge:"Open to Sales roles",tag:"Sales Advisor | Inbound and Outbound Sales | Customer Relations",eye:"Customer-first. Results-driven. Sales-ready.",qt:"\u201cUnderstand the customer first. The sale follows.\u201d",cta2:"See my sales experience",cta2h:"#experience",title:"John Leigh Soguilon | Sales Advisor",words:["inbound sales calls","outbound sales","needs discovery","objection handling","customer retention","CRM follow-up"],sum:"<mark>2+ years</mark> hands-on in sales and e-commerce.<br><mark>12+ years</mark> in BPO and customer operations.<br><mark>97%+</mark> accuracy and QA score.",stage:2,svc:SS,svb:SSB,subj:"Sales role inquiry",j:SJS,jyA:"Sales process",jyH:"Where I fit in a deal\u2019s journey.",jyP:"Tap each stage to see what happens in a sale, and where I come in.",skills:SKS,stats:[[2,"+","years hands-on in sales and e-commerce"],[12,"+","years in BPO and customer operations"],[97,"%+","accuracy and QA score"]],start:START.sales}};
+const VIS={va:["tp","ar","ws","sc","ib","tb","dc","mac","tpl","cr"],sales:["sd","cs","ws","sc","ib","dc","tpl","cr"]};
+function renderSvc(B){$("svc").innerHTML=SVC.map((p,i)=>{const b=B[i]||["",""];return `<div class="bento rv flip" tabindex="0" role="button" aria-label="${esc(p.t)}, press to flip"><div class="fi"><div class="ft"><span class="n">${String(i+1).padStart(2,"0")}</span><h3>${esc(p.t)}</h3><p>${esc(p.p)}</p><em class="hint">Tap to flip \u21bb</em></div><div class="bk"><small>YOU GET</small><b>${esc(b[0])}</b><small>TOOLS</small><span>${esc(b[1])}</span><button class="btn" data-add="${i}">Add to my request</button></div></div></div>`}).join("")}
+function renderJobs(m){const L=m==="sales"?SJ:D.jobs;$("jobs").innerHTML=L.map(j=>`<div class="job rv"><div class="d">${esc(j[0])}</div><div><h3>${esc(j[2])}</h3><div class="c">${esc(j[1])}</div><p>${esc(j[3])}</p></div></div>`).join("")}
+function setMode(m,init){const M=MODES[m],R=document.documentElement;R.dataset.mode=m;
+[...$("mode").children].forEach(b=>b.classList.toggle("on",b.dataset.m===m));
+BT=M.badge;tick();$("tag").textContent=M.tag;$("sum").innerHTML=M.sum;$("eye").textContent=M.eye;$("qt").textContent=M.qt;$("cta2").textContent=M.cta2;$("cta2").href=M.cta2h;document.title=M.title;
+W=M.words;wi=0;ci=0;dl=false;
+SVC=M.svc;SUBJ=M.subj;sel.clear();$("pick").innerHTML=SVC.map((p,i)=>`<button data-i="${i}">${esc(p.t)}</button>`).join("");upd();renderSvc(M.svb);
+J=M.j;$("steps").innerHTML=J.map((s,i)=>`<button onclick="step(${i})"><b>0${i+1}</b>${esc(s[0])}</button>`).join("");step(0);
+$("jyA").textContent=M.jyA;$("jyH").textContent=M.jyH;$("jyP").textContent=M.jyP;
+renderJobs(m);$("skills").innerHTML=M.skills.map(s=>`<span class="chip">${esc(s)}</span>`).join("");
+$("res").innerHTML=M.stats.map(s=>`<div><b><span data-n="${s[0]}">${s[0]}</span>${s[1]}</b>${s[2]}</div>`).join("");
+$("start").querySelectorAll(".bento").forEach((c,i)=>{c.innerHTML=`<span class="n">0${i+1}</span><h3>${esc(M.start[i][0])}</h3><p>${esc(M.start[i][1])}</p><p class="more">${esc(M.start[i][2])}</p>`});
+ph(M.stage);
+const cr=D.creative&&D.creative.length;[...$("tabs2").children].forEach(b=>{b.hidden=!VIS[m].includes(b.dataset.t)||(b.dataset.t==="cr"&&!cr)});
+const f=$("tabs2").querySelector("button:not([hidden])");if(f)f.click();
+if(!init)["svc","jobs","start"].forEach(id=>document.querySelectorAll("#"+id+" .rv").forEach(x=>x.classList.add("in")))}
+const SP={"Moving and storage":{c:1520,q:610,w:266,r:118000,t:[14.2,16.8,15.1,17.9,16.2,18.8,17.4,19.6,18.1,20.3,18.9,19.5]},"Healthcare plans":{c:1180,q:430,w:177,r:94500,t:[12.4,13.9,12.8,14.6,13.5,15.2,14.1,15.8,14.9,16.2,15.1,15.8]},"E-commerce":{c:940,q:410,w:202,r:61200,t:[17.5,19.2,18,20.1,18.7,21,19.6,21.8,20.2,22.4,21.1,21.9]}};
+const OBJ=[["Price",38],["Timing",27],["Needs to think about it",21],["Already has a provider",14]];
+function sdr(){const k=$("sdp").value,n=+$("sdw").value,L=k==="All"?Object.values(SP):[SP[k]],f=n/12,S=a=>Math.round(L.reduce((x,p)=>x+p[a],0)*f),c=S("c"),q=S("q"),w=S("w"),r=S("r"),tr=L[0].t.map((_,i)=>+av(L.map(p=>p.t[i])).toFixed(1)).slice(-n);
+$("sdk").innerHTML=K("Calls made",c.toLocaleString())+K("Conversion rate",(w/c*100).toFixed(1)+"%")+K("Deals won",w.toLocaleString())+K("Revenue","$"+r.toLocaleString());
+$("sdl").innerHTML=line(tr,18);
+$("sdf").innerHTML=[["Calls",c],["Qualified",q],["Won",w]].map(x=>`<div class="row"><span class="n" style="max-width:90px">${x[0]}</span><div class="bar"><i style="width:${x[1]/c*100}%"></i></div><b>${x[1].toLocaleString()}</b></div>`).join("");
+$("sdo").innerHTML=OBJ.map(x=>`<div class="row"><span class="n">${x[0]}</span><div class="bar" style="max-width:240px"><i style="width:${x[1]/OBJ[0][1]*100}%"></i></div><b>${x[1]}%</b></div>`).join("")}
+$("sdp").onchange=$("sdw").onchange=sdr;sdr();
+setMode(location.hash==="#sales"?"sales":"va",true);
+$("mode").onclick=e=>{const b=e.target.closest("button");if(b)setMode(b.dataset.m)};
+const hm=()=>{if(location.hash==="#sales")setMode("sales");else if(location.hash==="#va")setMode("va")};addEventListener("hashchange",hm);hm();
 const io="IntersectionObserver" in window?new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.1}):null;
 document.querySelectorAll(".rv").forEach(el=>io?io.observe(el):el.classList.add("in"));
 </script>
