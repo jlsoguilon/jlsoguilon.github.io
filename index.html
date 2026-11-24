@@ -34,10 +34,10 @@ section{padding:110px 0 20px}
 .act{font-size:12px;letter-spacing:.35em;text-transform:uppercase;color:var(--glow);margin:0 0 14px}
 h2{font-size:clamp(34px,6vw,64px);line-height:1.04;letter-spacing:-.035em;font-weight:700;margin:0 0 48px}
 .state{font-size:clamp(24px,4.2vw,46px);line-height:1.2;letter-spacing:-.025em;font-weight:600;margin:0 0 60px}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));gap:16px}
 .stats div{border-top:1px solid var(--line);padding-top:18px;color:var(--mute)}
 .stats b{display:block;font-size:clamp(40px,6vw,68px);letter-spacing:-.04em;color:var(--ink);line-height:1}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(270px,100%),1fr));gap:16px}
 .bento{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:28px}
 .bento .n{display:block;color:var(--glow);font-weight:600;margin-bottom:34px}
 .bento h3{font-size:21px;letter-spacing:-.02em;line-height:1.2;margin:0 0 8px}.bento p{margin:0;color:var(--mute);font-size:15px}
@@ -53,7 +53,7 @@ h2{font-size:clamp(34px,6vw,64px);line-height:1.04;letter-spacing:-.035em;font-w
 .job .d{color:var(--mute);font-size:14px}.job h3{margin:0;font-size:22px;letter-spacing:-.02em;line-height:1.2}
 .job .c{color:var(--glow);font-weight:600;margin:4px 0 8px}.job p{margin:0;color:var(--mute);font-size:15px}
 .big{font-size:clamp(40px,8vw,96px);line-height:1;letter-spacing:-.045em;font-weight:700;margin:0 0 50px}
-.tree{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
+.tree{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:14px}
 .lk{display:flex;align-items:center;gap:16px;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:18px 20px;text-decoration:none;transition:border-color .3s,transform .3s}
 .lk:hover{border-color:var(--glow);transform:translateY(-3px)}
 .lk .i{flex:none;width:44px;height:44px;border-radius:12px;background:var(--glow);color:#fff;display:grid;place-items:center;font-weight:700;font-size:14px}
@@ -127,7 +127,7 @@ main:nth-of-type(2) section:nth-of-type(3){--glow:#30d158;--spot:rgba(48,209,88,
 .pn[hidden]{display:none}
 .ctl{display:flex;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
 .ctl select{font:inherit;background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:6px 12px}
-.kp{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin-bottom:22px}
+.kp{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(130px,100%),1fr));gap:12px;margin-bottom:22px}
 .kp div{border:1px solid var(--line);border-radius:16px;padding:14px}.kp b{display:block;font-size:24px;letter-spacing:-.02em;color:var(--glow)}.kp span{font-size:12px;color:var(--mute)}
 .pn .two{display:grid;grid-template-columns:1.3fr 1fr;gap:26px}
 .sm{font-size:13px;margin:0 0 8px}
@@ -135,7 +135,7 @@ main:nth-of-type(2) section:nth-of-type(3){--glow:#30d158;--spot:rgba(48,209,88,
 .dn{display:grid;grid-template-columns:110px 1fr 26px;align-items:center;gap:8px;font-size:13px;margin-bottom:10px}.dn i{display:block;height:10px;border-radius:6px;background:var(--glow)}.dn span{color:var(--mute)}
 pre{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:16px;overflow-x:auto;font:13px/1.5 ui-monospace,Menlo,Consolas,monospace;white-space:pre;margin:14px 0}
 details{border-bottom:1px solid var(--line);padding:12px 0}summary{cursor:pointer;font-weight:600}
-.cgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}.cgrid img{width:100%;border-radius:12px}
+.cgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:16px}.cgrid img{width:100%;border-radius:12px}
 @media (max-width:700px){.pn .two{grid-template-columns:1fr}}
 .app{padding:0!important;display:grid;grid-template-columns:180px 1fr;overflow:hidden;--a:#0a84ff;--g:#30d158;--w:#ff9f0a;--r:#ff375f}
 .app[hidden]{display:none}
@@ -146,7 +146,7 @@ details{border-bottom:1px solid var(--line);padding:12px 0}summary{cursor:pointe
 .mainp{min-width:0}.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:16px 22px;border-bottom:1px solid var(--line)}.top h3{margin:0}
 .top .ctl{margin:0}.av{width:34px;height:34px;border-radius:50%;background:var(--a);color:#fff;display:grid;place-items:center;font-size:12px;font-weight:700}
 .bd{padding:20px 22px 24px}
-.kg{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:16px}
+.kg{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(150px,100%),1fr));gap:12px;margin-bottom:16px}
 .k{border:1px solid var(--line);border-radius:16px;padding:14px;background:var(--bg)}.k span{display:block;font-size:12px;color:var(--mute)}.k b{font-size:26px;letter-spacing:-.02em}.k em{font-style:normal;font-size:12px;margin-left:8px}
 .g{color:var(--g)}.w{color:var(--w)}.r{color:var(--r)}
 .cg{display:grid;grid-template-columns:1.6fr 1fr;gap:14px;margin-bottom:14px}
@@ -156,9 +156,9 @@ details{border-bottom:1px solid var(--line);padding:12px 0}summary{cursor:pointe
 .ch{font-size:11px;font-weight:600;padding:3px 10px;border-radius:99px;background:color-mix(in srgb,currentColor 14%,transparent)}
 .bar{height:8px;border-radius:5px;background:var(--line);overflow:hidden;flex:1}.bar i{display:block;height:100%;border-radius:5px;background:var(--a)}
 .tb{width:100%;border-collapse:collapse;font-size:14px}.tb th{text-align:left;color:var(--mute);font-weight:500;font-size:12px;padding:8px}.tb td{padding:10px 8px;border-top:1px solid var(--line)}
-.pc{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}.pc .c2 b{font-size:22px}.pc small{color:var(--mute);display:block}
+.pc{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(210px,100%),1fr));gap:12px}.pc .c2 b{font-size:22px}.pc small{color:var(--mute);display:block}
 .ob{font:inherit;font-size:12px;background:none;border:1px solid var(--line);color:var(--mute);border-radius:99px;padding:5px 12px;cursor:pointer}.ob.on{background:var(--g);border-color:var(--g);color:#000}
-.wsg{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.wsg{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:18px}
 .wsg figure{margin:0;border:1px solid var(--line);border-radius:20px;overflow:hidden;background:var(--bg)}
 .wsg .im{display:block;overflow:hidden;cursor:zoom-in;aspect-ratio:16/10;background:#fff}.wsg img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .5s}.wsg .im:hover img{transform:scale(1.06)}
 .wsg figcaption{padding:16px 18px}.wsg b{display:block;font-size:18px;margin-bottom:4px}.wsg p{margin:0 0 10px;color:var(--mute);font-size:14px}
@@ -167,7 +167,7 @@ details{border-bottom:1px solid var(--line);padding:12px 0}summary{cursor:pointe
 @media (max-width:760px){.app{grid-template-columns:1fr}.side{flex-direction:row;overflow-x:auto;border-right:0;border-bottom:1px solid var(--line);padding:10px}.side .logo,.side p{display:none}.side button{white-space:nowrap}.cg{grid-template-columns:1fr}.tb{font-size:13px}}
 .pn{--a:#0a84ff;--g:#30d158;--w:#ff9f0a;--r:#ff375f}
 h2{padding-bottom:.14em}
-.slots{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin:12px 0}
+.slots{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(150px,100%),1fr));gap:8px;margin:12px 0}
 .sl{font:inherit;text-align:left;background:transparent;border:1px solid var(--line);border-radius:12px;padding:10px 12px;color:var(--ink);cursor:pointer}.sl small{display:block;color:var(--mute);font-size:12px}
 .sl.ok{border-color:var(--g);background:color-mix(in srgb,var(--g) 12%,transparent)}.sl:hover{border-color:var(--glow)}
 .mail{display:block;width:100%;text-align:left;font:inherit;background:none;border:0;border-bottom:1px solid var(--line);padding:12px 4px;color:var(--ink);cursor:pointer}
@@ -240,6 +240,54 @@ html[data-mode="sales"] #contact{--glow:#ff6a3d;--spot:rgba(255,106,61,.25)}
 html[data-mode="sales"] .stats b{background-image:linear-gradient(135deg,#ff6a3d,#f43f5e)}
 html[data-mode="sales"] .stats div:nth-child(2) b{background-image:linear-gradient(135deg,#ff9f0a,#ffc233)}
 html[data-mode="sales"] .stats div:nth-child(3) b{background-image:linear-gradient(135deg,#f43f5e,#ff9f0a)}
+
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+.route{--n:5;--i:0;position:relative;display:grid;grid-template-columns:repeat(var(--n),1fr);margin:8px 0 24px}
+.route::before{content:"";position:absolute;top:21px;left:calc(100% / var(--n) / 2);right:calc(100% / var(--n) / 2);height:3px;border-radius:2px;background:var(--line)}
+.route::after{content:"";position:absolute;top:21px;left:calc(100% / var(--n) / 2);height:3px;border-radius:2px;background:var(--glow);width:calc(100% / var(--n) * var(--i));transition:width .7s cubic-bezier(.2,.7,.2,1)}
+.tok{position:absolute;z-index:2;top:22px;left:calc(100% / var(--n) * (var(--i) + .5));width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;background:#fff;box-shadow:0 0 0 4px var(--glow),0 0 22px var(--glow);transition:left .7s cubic-bezier(.2,.7,.2,1);pointer-events:none}
+.rn{position:relative;z-index:1;background:none;border:0;color:var(--mute);font:inherit;text-align:center;cursor:pointer;padding:0 4px}
+.rn .dot{display:grid;place-items:center;width:44px;height:44px;margin:0 auto 10px;border-radius:50%;background:var(--card);border:2px solid var(--line);font-weight:700;transition:.4s}
+.rn.done .dot{border-color:var(--glow);color:var(--glow)}
+.rn.on .dot{background:var(--glow);border-color:var(--glow);color:#fff;box-shadow:0 0 0 8px var(--spot);transform:scale(1.1)}
+.rn.on{color:var(--ink)}.rn .lb{display:block;font-size:14px;line-height:1.25}
+.stagecard{position:relative;border:1px solid var(--line);border-radius:28px;padding:30px;background:var(--card);overflow:hidden;min-height:230px}
+.stagecard .big{position:absolute;right:20px;top:-8px;font-size:120px;font-weight:800;letter-spacing:-.06em;color:var(--glow);opacity:.12;line-height:1;pointer-events:none}
+.stagecard h3{font-size:clamp(20px,3vw,26px);margin:0 0 16px;letter-spacing:-.02em}
+.stagecard .cols{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.stagecard .cols>div{padding:16px 18px;border-radius:18px;background:var(--bg);border:1px solid var(--line)}
+.stagecard .cols .me{border-color:var(--glow);box-shadow:0 0 40px var(--spot)}
+.stagecard small{display:block;letter-spacing:.2em;text-transform:uppercase;font-size:11px;color:var(--mute);margin-bottom:8px}
+.stagecard p{margin:0;font-size:clamp(16px,2vw,18px);line-height:1.4}
+.sc-in{animation:scin .5s cubic-bezier(.2,.7,.2,1)}@keyframes scin{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.snav{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap}.snav button{font:inherit;font-size:14px;background:none;border:1px solid var(--line);color:var(--ink);border-radius:99px;padding:8px 16px;cursor:pointer}.snav button:hover{border-color:var(--glow)}.snav button:disabled{opacity:.3;cursor:default}
+nav .wrap{gap:12px}
+.badge{max-width:100%;flex-wrap:wrap;justify-content:center;text-align:center;border-radius:20px;line-height:1.4}
+.toast{max-width:calc(100vw - 32px);flex-wrap:wrap;justify-content:center}
+.c2{overflow-x:auto}
+@media (min-width:1600px){.wrap{max-width:1200px}body{font-size:18px}}
+@media (max-width:1000px){.rn .lb{font-size:13px}}
+@media (max-width:900px){.cg,.pn .two{grid-template-columns:1fr}.tcols{grid-template-columns:1fr 1fr}.app{grid-template-columns:150px 1fr}}
+@media (max-width:760px){
+ .route{display:flex;flex-direction:column;gap:6px}.route::before,.route::after,.tok{display:none}
+ .rn{display:flex;align-items:center;gap:14px;text-align:left;padding:8px 10px;border-radius:16px;border:1px solid transparent}.rn .dot{margin:0;width:38px;height:38px;flex:none}.rn.on{background:var(--card);border-color:var(--glow)}.rn .lb{font-size:15px}
+ .stagecard{padding:22px}.stagecard .cols{grid-template-columns:1fr}.stagecard .big{font-size:80px}
+ .app{grid-template-columns:1fr}.tcols{grid-template-columns:1fr}
+}
+@media (max-width:560px){nav b{display:none}nav .wrap{justify-content:flex-end}.wrap{padding:0 16px}.page{padding:0}.hero{padding:44px 16px}.btn{padding:12px 22px}.bento{border-radius:20px}.flip .ft,.flip .bk{padding:22px}}
+@media (max-width:380px){html{font-size:15px}.ph{width:150px}}
+@media (hover:none){.job:hover,.lk:hover,.chip:hover,.tabs2 button:hover{transform:none}}
+#mt{position:fixed;inset:0;z-index:100;display:grid;place-items:center;color:#fff;text-align:center;clip-path:circle(0 at var(--x) var(--y));transition:clip-path .65s cubic-bezier(.7,0,.2,1),opacity .6s,transform .6s}
+#mt.go{clip-path:circle(150vmax at var(--x) var(--y))}
+#mt.out{opacity:0;transform:scale(1.06)}
+.mt-in small{display:block;letter-spacing:.4em;text-transform:uppercase;font-size:13px;opacity:0;animation:mtf .5s .3s forwards}
+.mt-in b{display:block;font-size:clamp(40px,11vw,120px);letter-spacing:-.04em;line-height:1.05;margin:10px 0 14px;perspective:600px}
+.mt-in b i{display:inline-block;font-style:normal;opacity:0;transform:translateY(40px) rotateX(-70deg);animation:mtl .6s cubic-bezier(.2,.8,.2,1) forwards;animation-delay:calc(var(--d) + .35s)}
+.mt-in span{display:block;font-size:clamp(14px,2.4vw,20px);opacity:0;animation:mtf .5s .75s forwards}
+@keyframes mtl{to{opacity:1;transform:none}}@keyframes mtf{to{opacity:.9}}
+#mt .ring{position:fixed;left:var(--x);top:var(--y);width:20px;height:20px;margin:-10px;border:2px solid rgba(255,255,255,.75);border-radius:50%;animation:ringp .9s ease-out forwards}
+#mt .ring.r2{animation-delay:.18s}
+@keyframes ringp{to{transform:scale(90);opacity:0}}
 </style>
 </head>
 <body>
@@ -267,7 +315,7 @@ html[data-mode="sales"] .stats div:nth-child(3) b{background-image:linear-gradie
 <section id="services"><p class="act rv">Services</p><h2 class="rv">What I can do for you.</h2><div class="grid" id="svc"></div></section>
 <section id="journey"><p class="act rv" id="jyA">Revenue cycle</p><h2 class="rv" id="jyH">Where I fit in a claim’s journey.</h2>
 <p class="mute rv" id="jyP" style="margin:0 0 30px;max-width:640px">Tap each stage to see what happens to a healthcare claim, and where I come in.</p>
-<div class="steps rv" id="steps"></div><div class="panel rv" id="panel"></div></section>
+<div class="route rv" id="steps" style="--n:5;--i:0"></div><div class="stagecard rv" id="panel"></div></section>
 <section id="experience"><p class="act rv">Experience</p><h2 class="rv">My career path.</h2><p class="act rv" style="margin:40px 0 12px">Career stages</p><p class="mute rv" style="margin:0 0 18px">Tap a stage to see how my career grew.</p>
 <div class="steps rv" id="pth"></div><div class="panel rv" id="pthp"></div>
 <p class="act rv" style="margin:40px 0 12px">Work history</p><div id="jobs"></div></section>
@@ -438,9 +486,6 @@ let J=[["Claim submitted","Clean claims start with verified insurance and eligib
 ["Denial or short pay","EOBs and ERAs explain why a claim did not pay in full.","Reviewing EOBs/ERAs, finding the denial reason, and lining up the next action."],
 ["Follow-up","Timely follow-up keeps revenue from slipping through the cracks.","Payer follow-up and resolution actions, with clear notes on every touch."],
 ["Posted and audited","Accurate posting and quality checks close the loop.","Quality audits of AR follow-up and billing work for accuracy and compliance, which is my current role."]];
-$("steps").innerHTML=J.map((s,i)=>`<button onclick="step(${i})"><b>0${i+1}</b>${esc(s[0])}</button>`).join("");
-function step(i){[...$("steps").children].forEach((b,k)=>b.classList.toggle("on",k===i));$("panel").innerHTML=`<div><small>What happens</small><p>${esc(J[i][1])}</p></div><div><small>Where I come in</small><p>${esc(J[i][2])}</p></div>`}
-step(0);
 const sel=new Set();
 function upd(){const l=[...sel].map(i=>"- "+SVC[i].t).join("\n");
 $("req").href="mailto:"+D.email+"?subject="+encodeURIComponent(SUBJ)+"&body="+encodeURIComponent("Hi John,\n\nI am looking for help with:\n"+(l||"- ")+"\n\nMy name and company:\n\nThanks!")}
@@ -559,6 +604,12 @@ document.addEventListener("click",e=>{const b=e.target.closest(".btn");if(!b)ret
 document.addEventListener("pointermove",e=>{const t=e.target.closest?e.target:null;if(!t)return;const c=t.closest(".bento,.lk");if(c){const r=c.getBoundingClientRect();c.style.setProperty("--mx",e.clientX-r.left+"px");c.style.setProperty("--my",e.clientY-r.top+"px")}
 const m=t.closest(".btn");document.querySelectorAll(".btn.mg").forEach(x=>{if(x!==m){x.style.transform="";x.classList.remove("mg")}});if(m&&e.pointerType==="mouse"){const r=m.getBoundingClientRect();m.classList.add("mg");m.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.12}px,${(e.clientY-r.top-r.height/2)*.18}px)`}});
 if(D.testimonials&&D.testimonials.length){$("proof").hidden=false;$("tms").innerHTML=D.testimonials.map(t=>`<div class="bento rv"><p style="font-size:18px;line-height:1.5">\u201c${esc(t.q)}\u201d</p><p class="mute" style="margin-top:14px">${esc(t.n)}${t.r?", "+esc(t.r):""}</p></div>`).join("")}
+let jt=null,jcur=0;
+function rj(){const r=$("steps");r.style.setProperty("--n",J.length);r.innerHTML='<i class="tok"></i>'+J.map((s,i)=>`<button class="rn" onclick="step(${i},1)"><span class="dot">${i+1}</span><span class="lb">${esc(s[0])}</span></button>`).join("");stopPlay();step(0,1)}
+function step(i,u){i=Math.max(0,Math.min(J.length-1,i));jcur=i;if(u)stopPlay();const r=$("steps");r.style.setProperty("--i",i);[...r.querySelectorAll(".rn")].forEach((b,k)=>{b.classList.toggle("on",k===i);b.classList.toggle("done",k<i)});
+$("panel").innerHTML=`<span class="big">0${i+1}</span><div class="sc-in"><h3>${esc(J[i][0])}</h3><div class="cols"><div><small>What happens</small><p>${esc(J[i][1])}</p></div><div class="me"><small>Where I come in</small><p>${esc(J[i][2])}</p></div></div><div class="snav"><button onclick="step(${i-1},1)" ${i===0?"disabled":""}>\u2039 Back</button><button onclick="step(${i+1},1)" ${i===J.length-1?"disabled":""}>Next \u203a</button><button onclick="togglePlay()">${jt?"\u275a\u275a Pause":"\u25b6 Play the journey"}</button></div></div>`}
+function stopPlay(){if(jt){clearInterval(jt);jt=null}}
+function togglePlay(){if(jt){stopPlay();step(jcur)}else{jt=setInterval(()=>{if(jcur>=J.length-1){stopPlay();step(jcur);return}step(jcur+1)},3500);step(jcur)}}
 const SS=[{t:"Inbound Sales",p:"Handle inbound calls and turn inquiries into sales."},{t:"Outbound Sales and Follow-Up",p:"Reach out to leads, follow up on time, and keep deals moving."},{t:"Needs Discovery",p:"Ask the right questions to find what the customer really needs."},{t:"Objection Handling",p:"Answer concerns calmly and keep the conversation moving toward a decision."},{t:"Logistics Sales (Moving and Storage)",p:"Advise customers on moving and storage options and close the sale."},{t:"Healthcare Plan Sales Support",p:"Support customers with healthcare plan questions and next steps."},{t:"E-Commerce Orders and Support",p:"Process orders and support customers across e-commerce accounts."},{t:"CRM and Pipeline Management",p:"Keep leads, notes, and follow-ups updated so nothing is missed."},{t:"Customer Retention",p:"Resolve issues and follow up so customers come back."},{t:"Sales Quality and Coaching",p:"Review sales calls for quality and compliance and coach agents with clear feedback."},{t:"Sales Reporting",p:"Track calls, conversions, and follow-ups in clear reports."},{t:"Scheduling and Appointment Setting",p:"Book calls and demos and keep calendars conflict-free."}];
 const SSB=[["More inquiries turned into customers.","Phone, CRM, scripts"],["Fewer leads going cold.","CRM, email, phone"],["Offers that fit the customer.","Discovery questions, notes"],["More conversations that end in a yes.","Scripts, role-play"],["Clear quotes and smooth handoffs.","Phone, CRM"],["Customers who understand their options.","Phone, plan guides"],["Fewer order issues and happier buyers.","Shopify, email, chat"],["A clean, trustworthy pipeline.","HubSpot, CRM systems, Excel"],["Higher satisfaction and repeat business.","CRM, email, phone"],["Better calls and consistent quality.","Call audits, scorecards"],["Numbers you can act on.","Excel, Google Sheets"],["More meetings that actually happen.","Calendly, Google Calendar, Outlook"]];
 const SJ=[["Apr 2024 \u2013 Feb 2026","Concentrix Philippines","Sales Call Advisor II | Healthcare and Logistics Sales","Handled inbound and outbound sales calls for logistics (moving and storage) and healthcare accounts. Identified customer needs, delivered tailored solutions to convert inquiries into sales, and sustained high customer satisfaction and sales performance."],["May 2022 \u2013 Apr 2024","Foundever, Inc.","Quality Compliance Analyst | E-Commerce and Sales","Evaluated B2B and e-commerce sales interactions and coached agents on sales conversations. Took live calls and handled customer transactions alongside audits to stay hands-on with the process."],["May 2026 \u2013 Nov 2026","Access Healthcare","Quality Analyst II | Healthcare Revenue Cycle Management","Complete about 75 audits a day with 97%+ accuracy and QA score, and process up to 50 invoices a day on invoice work."],["Jan 2019 \u2013 Sep 2021","EXL Services Philippines Inc.","Quality Compliance Analyst | Healthcare, Prior Authorization","Monitored healthcare insurance interactions for compliance, analyzed trends, and coached agents."],["Sep 2021 \u2013 May 2022","Uber Philippines Centre of Excellence","Quality Compliance Analyst | Ride-Hailing Operations","Audited support interactions and gave actionable feedback to improve agent performance and customer experience."],["2012 \u2013 2018","Customer service and escalation roles","Finance, food delivery, and gaming support","Bayview Technologies, Open Access Marketing, West Contact Services, FIS Global Solutions, and MDS Call Solutions."]];
@@ -575,7 +626,7 @@ function setMode(m,init){const M=MODES[m],R=document.documentElement;R.dataset.m
 BT=M.badge;tick();$("tag").textContent=M.tag;$("sum").innerHTML=M.sum;$("eye").textContent=M.eye;$("qt").textContent=M.qt;$("cta2").textContent=M.cta2;$("cta2").href=M.cta2h;document.title=M.title;
 W=M.words;wi=0;ci=0;dl=false;
 SVC=M.svc;SUBJ=M.subj;sel.clear();$("pick").innerHTML=SVC.map((p,i)=>`<button data-i="${i}">${esc(p.t)}</button>`).join("");upd();renderSvc(M.svb);
-J=M.j;$("steps").innerHTML=J.map((s,i)=>`<button onclick="step(${i})"><b>0${i+1}</b>${esc(s[0])}</button>`).join("");step(0);
+J=M.j;rj();
 $("jyA").textContent=M.jyA;$("jyH").textContent=M.jyH;$("jyP").textContent=M.jyP;
 renderJobs(m);$("skills").innerHTML=M.skills.map(s=>`<span class="chip">${esc(s)}</span>`).join("");
 $("res").innerHTML=M.stats.map(s=>`<div><b><span data-n="${s[0]}">${s[0]}</span>${s[1]}</b>${s[2]}</div>`).join("");
@@ -593,7 +644,17 @@ $("sdf").innerHTML=[["Calls",c],["Qualified",q],["Won",w]].map(x=>`<div class="r
 $("sdo").innerHTML=OBJ.map(x=>`<div class="row"><span class="n">${x[0]}</span><div class="bar" style="max-width:240px"><i style="width:${x[1]/OBJ[0][1]*100}%"></i></div><b>${x[1]}%</b></div>`).join("")}
 $("sdp").onchange=$("sdw").onchange=sdr;sdr();
 setMode(location.hash==="#sales"?"sales":"va",true);
-$("mode").onclick=e=>{const b=e.target.closest("button");if(b)setMode(b.dataset.m)};
+let busy=false;const MT={va:{big:"Healthcare VA",sub:"Revenue cycle \u00b7 Quality \u00b7 Claims",bg:"linear-gradient(135deg,#0a84ff,#8e5cff 55%,#ff375f)"},sales:{big:"Sales Mode",sub:"Calls \u00b7 Pipeline \u00b7 Results",bg:"linear-gradient(135deg,#ff6a3d,#f43f5e 55%,#ffc233)"}};
+function switchMode(m,btn){const R=document.documentElement;if(busy||R.dataset.mode===m)return;
+if(matchMedia("(prefers-reduced-motion:reduce)").matches){setMode(m);return}
+busy=true;const r=btn.getBoundingClientRect(),x=r.left+r.width/2,y=r.top+r.height/2,M=MT[m],ov=document.createElement("div");ov.id="mt";ov.setAttribute("aria-hidden","true");
+ov.style.cssText=`--x:${x}px;--y:${y}px;background:${M.bg}`;
+ov.innerHTML=`<div class="mt-in"><small>Switching to</small><b>${[...M.big].map((ch,i)=>`<i style="--d:${i*45}ms">${ch===" "?"&nbsp;":ch}</i>`).join("")}</b><span>${M.sub}</span></div><span class="ring"></span><span class="ring r2"></span>`;
+document.body.appendChild(ov);requestAnimationFrame(()=>requestAnimationFrame(()=>ov.classList.add("go")));
+setTimeout(()=>{setMode(m);window.scrollTo(0,0);document.querySelectorAll(".hero>*").forEach(el=>{el.style.animation="none";void el.offsetWidth;el.style.animation=""})},1000);
+setTimeout(()=>ov.classList.add("out"),1300);
+setTimeout(()=>{ov.remove();busy=false},1950)}
+$("mode").onclick=e=>{const b=e.target.closest("button");if(b)switchMode(b.dataset.m,b)};
 const hm=()=>{if(location.hash==="#sales")setMode("sales");else if(location.hash==="#va")setMode("va")};addEventListener("hashchange",hm);hm();
 const io="IntersectionObserver" in window?new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.1}):null;
 document.querySelectorAll(".rv").forEach(el=>io?io.observe(el):el.classList.add("in"));
